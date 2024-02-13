@@ -1,0 +1,73 @@
+///
+/// Get colour value by name.
+///
+/// @param  {string} $color
+/// @return {color}
+///
+@function color( $color ) {
+	@return map-get( $colors, $color );
+}
+
+///
+/// Get point value by name.
+///
+/// @param  {string} $point
+/// @return {number}
+///
+@function point( $point ) {
+	@return map-get( $points, $point );
+}
+
+///
+/// Get z-index by layer name.
+///
+/// @param  {string} $name
+/// @return {number}
+///
+@function z( $name ) {
+	@return map-get( $z-index, $name );
+}
+
+///
+/// Get unitless number.
+///
+/// @param  {number} $number
+/// @return {number}
+///
+@function strip-unit( $number ) {
+	@return $number / ( $number * 0 + 1 );
+}
+
+///
+/// Get number as rem value.
+///
+/// @param  {number} $number
+/// @return {number}
+///
+@function rem( $number ) {
+	@if unit( $number ) == px {
+		@return strip-unit( $number ) * ( 1rem / 16 );
+	} @else if unit( $number ) != rem {
+		@return strip-unit( $number ) * 1rem;
+	} @else {
+		@return $number;
+	}
+}
+
+///
+/// Get varying value between two breakpoints.
+///
+/// https://css-tricks.com/snippets/css/fluid-typography/
+///
+/// @param {number}          $from
+/// @param {number}          $to
+/// @param {number | string} $min  - Min breakpoint to scale from
+/// @param {number | string} $max  - Max breakpoint to scale to
+/// @param {number}          $base - Defaults to 100vw
+///
+@function vary( $from, $to, $min: x-small, $max: x-large, $base: 100vw ) {
+	$min: if( point( $min ), point( $min ), $min );
+	$max: if( point( $max ), point( $max ), $max );
+
+	@return calc( #{$from} + #{strip-unit( $to - $from )} * ( ( #{$base} - #{$min} ) / #{strip-unit( $max - $min )} ) );
+}

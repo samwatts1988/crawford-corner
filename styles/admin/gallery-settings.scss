@@ -1,0 +1,5 @@
+// Hide "Columns" & "Size" gallery settings
+.gallery-settings > .setting:nth-child(3),
+.gallery-settings > .setting:nth-child(5) {
+	display: none;
+}

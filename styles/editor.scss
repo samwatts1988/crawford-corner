@@ -1,0 +1,12 @@
+@import 'abstracts/*';
+@import 'base/index';
+@import 'content/*';
+
+body {
+	margin: 1em;
+	max-width: 990px;
+
+	> :first-child {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,13 @@
+a {
+	text-decoration: none;
+	color: color(primary);
+
+	&:hover {
+		color: inherit;
+	}
+
+	&[href^='mailto:'],
+	&[href^='tel:'] {
+		white-space: nowrap;
+	}
+}

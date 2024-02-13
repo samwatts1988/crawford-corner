@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	color: color(body);
+	background: #fff;
+}
+
+input[type=submit],
+input[type=button],
+button,
+a {
+	-webkit-tap-highlight-color: transparent;
+	touch-action: manipulation;
+	transition: 200ms;
+	cursor: pointer;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	transition: 200ms;
+	transition-property: opacity;
+	vertical-align: middle;
+
+	&[data-src] {
+		position: absolute;
+		opacity: 0;
+	}
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+main,
+nav {
+	display: block;
+}
+
+blockquote,
+embed,
+fieldset,
+figure,
+iframe,
+img,
+legend,
+object {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}

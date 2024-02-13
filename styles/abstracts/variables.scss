@@ -1,0 +1,23 @@
+$typography: (
+	
+);
+
+$z-index: (
+	nav: 1000,
+);
+
+$colors: (
+	body   : #23282D,
+	light  : #EEEEEE,
+	primary: #0073AA,
+	warn   : #DC3232,
+	success: #27AE60,
+);
+
+$points: (
+	x-small: rem(414px),
+	small  : rem(600px),
+	medium : rem(768px),
+	large  : rem(1024px),
+	x-large: rem(1296px),
+);

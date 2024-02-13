@@ -1,0 +1,120 @@
+///
+/// Generate breakpoint media query by point name or value.
+///
+/// @param {number | string} $point                - A point name or value.
+/// @param {number | string} $break    [min-width] - Either a maximum point name or value, or the media query.
+/// @param {string}          $property [width]     - If both $point and $break are points, the media query dimension.
+///
+@mixin bp( $point, $break: min-width, $property: width ) {
+	$point: if( point( $point ), point( $point ), $point );
+	$break: if( point( $break ), point( $break ), $break );
+
+	@if unit( $point ) == rem {
+		$point: ( $point / 1rem ) * 1em;
+	}
+
+	$is-bp: true !global;
+
+	@if type-of( $break ) == number {
+		@if unit( $break ) == rem {
+			$break: ( $break / 1rem ) * 1em - 0.001em;
+		} @else if unit( $break ) == em {
+			$break: $break - 0.001em;
+		}
+
+		@media screen and ( min-#{$property}: $point ) and ( max-#{$property}: $break ) {
+			@content
+		}
+	} @else {
+		@if unit( $point ) == em and index( ( max-width, max-height ), $break ) != null {
+			$point: $point - 0.001em;
+		}
+
+		@media screen and ( $break: $point ) {
+			@content
+		}
+	}
+
+	$is-bp: false !global;
+}
+
+///
+/// Generate iconfont rules.
+///
+/// @param {string} $family - The font family name
+///
+@mixin icon-font( $family: FontAwesome ) {
+	font-family: $family;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	speak: none;
+}
+
+///
+/// Generate icon.
+///
+/// @param {string} $icon
+///
+@mixin icon( $icon: null ) {
+	@if $is-bp {
+		@include icon-font;
+	} @else {
+		@extend %icon-font;
+	}
+
+	@if icon( $icon ) {
+		content: icon( $icon );
+	}
+}
+
+///
+/// Generate locked variable property(s) size.
+///
+/// @param {string | list}   $property
+/// @param {number}          $from
+/// @param {number}          $to
+/// @param {number | string} $min
+/// @param {number | string} $max
+///
+@mixin vary( $property, $from, $to, $min: x-small, $max: x-large ) {
+	@each $prop in $property {
+		#{$prop}: $from;
+	}
+
+	@include bp( $min ) {
+		@each $prop in $property {
+			#{$prop}: vary( $from, $to, $min, $max );
+		}
+	}
+
+	@include bp( $max ) {
+		@each $prop in $property {
+			#{$prop}: $to;
+		}
+	}
+}
+
+///
+/// Generate properties from defined typography.
+///
+/// @param {string} $name
+///
+@mixin font( $name: body ) {
+	@each $prop, $value in map-get( $typography, $name ) {
+		#{$prop}: #{$value};
+	}
+}
+
+///
+/// Generate locked variable font size.
+///
+/// @param {number}          $from
+/// @param {number}          $to
+/// @param {number | string} $min
+/// @param {number | string} $max
+///
+@mixin font-size( $from, $to, $min: x-small, $max: x-large ) {
+	@include vary( font-size, rem( $from ), rem( $to ), $min, $max );
+}

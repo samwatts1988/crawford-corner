@@ -1,0 +1,11 @@
+@import 'abstracts/*';
+
+body.login {
+	h1 a {
+		background: url('images/logo.svg') no-repeat 0 0;
+		background-size: 100%;
+		height: 0;
+		width: 100%;
+		padding-bottom: (122 / 520) * 100%;
+	}
+}
