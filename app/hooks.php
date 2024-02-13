@@ -46,3 +46,21 @@ add_filter( 'login_headertext', function () {
 add_filter( 'login_headerurl', function () {
 	return home_url( '/' );
 });
+
+/**
+* Removes WYSIWYG from specified page templates
+*/
+add_action('admin_enqueue_scripts', function() {
+
+    global $post;
+
+    if( ! is_a($post, 'WP_Post') ) {
+        return;
+    }
+
+    // Home
+    if( get_the_ID() === 8 ) {
+        remove_post_type_support( 'page', 'editor' );
+    }    
+
+});

@@ -1,0 +1,5 @@
+.mobile {
+	@include break {
+		display: none;
+	}
+}

@@ -6,30 +6,18 @@
 	<script>document.documentElement.className='has-js';</script>
 	<?php wp_head() ?>
 </head>
-<body <?php body_class() ?>>
+<body <?php body_class( 'bg:light' ) ?>>
 	<?php wp_body_open() ?>
 
 	<header class="site-header">
-		<div class="wrap push">
-			<a class="site-logo" href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo( 'template_url' ) ?>/images/logo.svg" alt="<?php bloginfo( 'name' ) ?>" /></a>
-			<a class="site-navicon" href="#nav">Menu</a>
+		<div class="wrap grid">
+			<div class="site-header__title">
+				<p class="font:bd text:md"><a href="<?php echo get_bloginfo( 'url' ); ?>"><?php echo get_bloginfo( 'name' ); ?></a></p>
+			</div>
+			<div class="site-header__desc">
+				<p class="font:bd text:md"><?php echo get_bloginfo( 'description' ); ?></p>
+			</div>
 		</div>
 	</header>
-
-	<nav class="site-nav" id="nav">
-		<div class="wrap push">
-			<a class="site-navicon" href="#content">Close</a>
-			<?php
-
-			wp_nav_menu([
-				'theme_location' => 'header',
-				'items_wrap'     => '<ul>%3$s</ul>',
-				'fallback_cb'    => '',
-				'container'      => '',
-			]);
-
-			?>
-		</div>
-	</nav>
 
 	<main id="content">

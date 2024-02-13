@@ -1,0 +1,9 @@
+.bg {
+
+	@each $name, $color in $colors {
+		&\:#{$name} {
+			background: $color;
+		}
+	}
+
+}

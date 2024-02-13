@@ -2,16 +2,22 @@ $typography: (
 	
 );
 
+:root {
+	--wrap-desktop: 1.5rem;
+}
+
 $z-index: (
+	header : 20,
 	nav: 1000,
 );
 
+$breakpoint: 860px;
+
 $colors: (
-	body   : #23282D,
-	light  : #EEEEEE,
+	body   : #735D53,
+	light  : #FCF6F4,
 	primary: #0073AA,
-	warn   : #DC3232,
-	success: #27AE60,
+	rollover: #FFAABA
 );
 
 $points: (

@@ -1,10 +1,21 @@
 @font-face {
-	font-family: 'Poppins';
+	font-family: 'BrutBold';
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
-	src: local('Poppins Regular'),
-	     local('Poppins-Regular'),
-	     url('fonts/poppins-400.woff2') format('woff2'),
-	     url('fonts/poppins-400.woff') format('woff');
+	src: local('Brut Bold'),
+	     local('Brut-Bold'),
+	     url('fonts/Brut_Grotesque_WEB-Bold.woff2') format('woff2'),
+	     url('fonts/Brut_Grotesque_WEB-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'BrutRegular';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: local('Brut Regular'),
+	     local('Brut-Regular'),
+	     url('fonts/Brut_Grotesque_WEB-Regular.woff2') format('woff2'),
+	     url('fonts/Brut_Grotesque_WEB-Regular.woff') format('woff');
 }

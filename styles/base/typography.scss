@@ -1,13 +1,36 @@
+html {
+	font: normal 400 100%/1.2 'BrutRegular', sans-serif;
+}
+
+body {
+	font-size: clamp( 1rem, 1.25vw, 2rem );
+}
+
 a {
 	text-decoration: none;
-	color: color(primary);
+	color: color(body);
 
 	&:hover {
-		color: inherit;
+		color: color(rollover);
 	}
 
 	&[href^='mailto:'],
 	&[href^='tel:'] {
 		white-space: nowrap;
+	}
+}
+
+.text {
+	&\:md {
+		font-size: clamp( 20px, 1.5625vw, 40px );
+	}
+	&\:sf {
+		font-size: clamp( 40px, 3.125vw, 80px )
+	}
+}
+
+.font {
+	&\:bd {
+		font-family: 'BrutBold', sans-serif;
 	}
 }

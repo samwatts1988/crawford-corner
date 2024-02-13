@@ -118,3 +118,24 @@
 @mixin font-size( $from, $to, $min: x-small, $max: x-large ) {
 	@include vary( font-size, rem( $from ), rem( $to ), $min, $max );
 }
+
+///
+/// Breakpoint
+///
+@mixin break {
+	@include bp( $breakpoint ) {
+		@content;
+	}
+}
+
+///
+/// Standard Aspect Ratio
+///
+/// @param {number}    		 $width
+/// @param {number}          $height
+///
+@mixin ar($width, $height) {
+	&:before {
+		padding-top: ($width / $height) * 100%;
+	}
+}

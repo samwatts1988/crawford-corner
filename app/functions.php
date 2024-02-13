@@ -1,6 +1,6 @@
 <?php
 
-namespace wp_theme;
+namespace cc;
 
 /**
  * Get (lazy-loaded) image HTML.
@@ -38,4 +38,41 @@ function image( $image = null, $size = 'full', $attr = '' ) {
 	}
 
 	return $image;
+}
+
+/**
+ * Render view file.
+ *
+ * @param  string|array $name If array, first found will be rendered.
+ * @param  array        $vars
+ * @return bool Was the view was found?
+ */
+function view( $name, $vars = [] ) {
+	if ( is_array( $name ) ) {
+		foreach ( $name as $_name ) {
+			$view = view( $_name, $vars );
+			if ( $view ) return $view;
+		}
+		return false;
+	}
+
+	if ( ! $name ) return false;
+	if ( substr( $name, -4 ) !== '.php' ) $name .= '.php';
+	if ( validate_file( $name ) ) return false;
+
+	$__file = locate_template( "views/$name" );
+	if ( ! $__file ) return false;
+
+	unset( $name );
+	extract( $vars, EXTR_SKIP );
+
+	if ( isset( $vars['vars'] ) ) {
+		$vars = $vars['vars'];
+	} else {
+		unset( $vars );
+	}
+
+	include $__file;
+
+	return $__file;
 }

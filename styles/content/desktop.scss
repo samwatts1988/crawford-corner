@@ -1,0 +1,7 @@
+.desktop {
+	display: none;
+
+	@include break {
+		display: block;
+	}
+}

@@ -1,0 +1,15 @@
+.hero {
+	width: 100%;
+
+	&__standfirst {
+		> div {
+			grid-column-start: 1;
+			grid-column-end: 3;
+			padding: 13.59375vw 0 27.96875vw 0;
+		}
+
+		.download {
+			margin: 3.59375vw 0 0 0;
+		}
+	}
+}

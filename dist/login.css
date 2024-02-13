@@ -1,3 +1,7 @@
+:root {
+	--wrap-desktop: 1.5rem;
+}
+
 body.login h1 a {
 	background: url("../images/logo.svg") no-repeat 0 0;
 	background-size: 100%;
