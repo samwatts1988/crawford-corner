@@ -124,6 +124,11 @@ a[href^="mailto:"], a[href^="tel:"] {
 	font-size: clamp(2.5rem, 3.125vw, 5rem);
 }
 
+::selection {
+	color: #735D53;
+	background: #FFAABA;
+}
+
 .screen-reader-text {
 	position: absolute;
 	overflow: hidden;
@@ -160,6 +165,9 @@ a[href^="mailto:"], a[href^="tel:"] {
 	display: block;
 	margin: 1.875vw 0 0 0;
 	width: 9.375vw;
+}
+.credit path {
+	transition: fill 250ms ease;
 }
 .credit a:hover path {
 	fill: #FFAABA;

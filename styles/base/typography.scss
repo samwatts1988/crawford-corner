@@ -34,3 +34,8 @@ a {
 		@extend %font-bd;
 	}
 }
+
+::selection {
+	color: color( body );
+	background: color( rollover );
+}
