@@ -1,0 +1,27 @@
+.standfirst-gallery {
+	margin: 0 0 28.125vw 0;
+
+	.standfirst {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+
+	.gallery {
+		transform: translateY( -2.34375vw );
+		width: 100%;
+		grid-column-start: 3;
+		grid-column-end: 5;
+
+		.swiper-navigation {
+			padding: 0 0 2.5vw 0;
+		}
+
+		.swiper-button-prev {
+			left: 0;
+		}
+
+		.swiper-button-next {
+			right: 0;
+		}
+	}
+}

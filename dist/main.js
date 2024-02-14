@@ -314,6 +314,25 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 
 (function ($) {
 
+	if( !$( '.swiper-standfirst-gallery' ) ) { return; }
+
+	var thumbnails = new Swiper('.swiper-standfirst-gallery', {
+	  speed: 750,
+	  slidesPerView: 1,
+	  spaceBetween: 24,
+	  loop: true,
+	  keyboard: {
+	  	enabled: true
+	  },
+	  navigation: {
+	  	prevEl: '.swiper-button-prev',
+	  	nextEl: '.swiper-button-next'
+	  }
+	});
+
+})( jQuery );
+(function ($) {
+
 	if( !$( '.swiper-thumbnail-gallery' ) ) { return; }
 
 	var thumbnails = new Swiper('.swiper-thumbnail-gallery', {
@@ -323,6 +342,10 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 	  loop: true,
 	  keyboard: {
 	  	enabled: true
+	  },
+	  navigation: {
+	  	prevEl: '.swiper-button-prev',
+	  	nextEl: '.swiper-button-next'
 	  }
 	});
 

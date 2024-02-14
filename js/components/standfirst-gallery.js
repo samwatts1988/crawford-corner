@@ -1,10 +1,10 @@
 (($) => {
 
-	if( !$( '.swiper-thumbnail-gallery' ) ) return;
+	if( !$( '.swiper-standfirst-gallery' ) ) return;
 
-	const thumbnails = new Swiper('.swiper-thumbnail-gallery', {
+	const thumbnails = new Swiper('.swiper-standfirst-gallery', {
 	  speed: 750,
-	  slidesPerView: 2,
+	  slidesPerView: 1,
 	  spaceBetween: 24,
 	  loop: true,
 	  keyboard: {

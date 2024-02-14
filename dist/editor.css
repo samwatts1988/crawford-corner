@@ -77,6 +77,8 @@ p,
 ul,
 ol,
 dl,
+dd,
+dt,
 blockquote,
 embed,
 fieldset,
@@ -88,6 +90,12 @@ object {
 	padding: 0;
 	border: 0;
 	margin: 0;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
 }
 
 html {
@@ -110,14 +118,10 @@ a[href^="mailto:"], a[href^="tel:"] {
 }
 
 .text\:md {
-	font-size: clamp(20px, 1.5625vw, 40px);
+	font-size: clamp(1.25rem, 1.5625vw, 2.5rem);
 }
 .text\:sf {
-	font-size: clamp(40px, 3.125vw, 80px);
-}
-
-.font\:bd {
-	font-family: "BrutBold", sans-serif;
+	font-size: clamp(2.5rem, 3.125vw, 5rem);
 }
 
 .screen-reader-text {
@@ -129,6 +133,22 @@ a[href^="mailto:"], a[href^="tel:"] {
 	border: 0;
 	margin: 0;
 	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.keyline {
+	border-top: 1px solid #735D53;
+}
+
+.font\:bd {
+	font-family: "BrutBold", sans-serif;
+}
+
+.copy > *:not(:last-of-type):not(li) {
+	margin: 0 0 1.025vw 0;
+}
+.copy a {
+	text-decoration: underline;
+	text-underline-offset: 0.15625vw;
 }
 
 .desktop {

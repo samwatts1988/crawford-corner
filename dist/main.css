@@ -77,6 +77,8 @@ p,
 ul,
 ol,
 dl,
+dd,
+dt,
 blockquote,
 embed,
 fieldset,
@@ -88,6 +90,12 @@ object {
 	padding: 0;
 	border: 0;
 	margin: 0;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
 }
 
 html {
@@ -110,14 +118,10 @@ a[href^="mailto:"], a[href^="tel:"] {
 }
 
 .text\:md {
-	font-size: clamp(20px, 1.5625vw, 40px);
+	font-size: clamp(1.25rem, 1.5625vw, 2.5rem);
 }
 .text\:sf {
-	font-size: clamp(40px, 3.125vw, 80px);
-}
-
-.font\:bd {
-	font-family: "BrutBold", sans-serif;
+	font-size: clamp(2.5rem, 3.125vw, 5rem);
 }
 
 .screen-reader-text {
@@ -140,6 +144,34 @@ a[href^="mailto:"], a[href^="tel:"] {
 	width: 100%;
 }
 
+.keyline {
+	border-top: 1px solid #735D53;
+}
+
+.schedule-of-areas tbody tr:last-child td, .font\:bd {
+	font-family: "BrutBold", sans-serif;
+}
+
+.collaborators dt + dd {
+	margin: 1.484375vw 0 0 0;
+}
+
+.credit a {
+	display: block;
+	margin: 1.875vw 0 0 0;
+	width: 9.375vw;
+}
+.credit a:hover path {
+	fill: #FFAABA;
+}
+
+.full-width-image {
+	margin: 0 0 28.125vw 0;
+}
+.full-width-image img {
+	width: 100%;
+}
+
 .hero {
 	width: 100%;
 }
@@ -150,6 +182,44 @@ a[href^="mailto:"], a[href^="tel:"] {
 }
 .hero__standfirst .download {
 	margin: 3.59375vw 0 0 0;
+}
+
+.offset-image-pair {
+	align-items: flex-start;
+	margin: 0 0 25.625vw 0;
+}
+.offset-image-pair figure {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.offset-image-pair figure:first-child {
+	margin: 14.0625vw 0 0 0;
+}
+.offset-image-pair figure + figure {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+
+.schedule-of-areas {
+	padding: 0 0 14.0625vw 0;
+}
+.schedule-of-areas header {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.schedule-of-areas td {
+	padding: 1.09375vw 0 1.40625vw 0;
+}
+.schedule-of-areas table {
+	border-bottom: 1px solid #735D53;
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+.site-footer > * {
+	padding: 0 var(--wrap-desktop);
+}
+.site-footer > .grid {
+	margin: 1.5625vw 0 14.0625vw 0;
 }
 
 .site-header {
@@ -169,11 +239,104 @@ a[href^="mailto:"], a[href^="tel:"] {
 	grid-column-end: 5;
 }
 
+.standfirst-gallery {
+	margin: 0 0 28.125vw 0;
+}
+.standfirst-gallery .standfirst {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.standfirst-gallery .gallery {
+	transform: translateY(-2.34375vw);
+	width: 100%;
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+.standfirst-gallery .gallery .swiper-navigation {
+	padding: 0 0 2.5vw 0;
+}
+.standfirst-gallery .gallery .swiper-button-prev {
+	left: 0;
+}
+.standfirst-gallery .gallery .swiper-button-next {
+	right: 0;
+}
+
+.text-fixed-images {
+	margin: 0 0 14.0625vw 0;
+}
+.text-fixed-images header {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.text-fixed-images article {
+	margin: 0 0 7.34375vw 0;
+}
+.text-fixed-images article + div {
+	align-items: flex-end;
+}
+.text-fixed-images article > div:not(.text-fixed-images__small) {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+.text-fixed-images figure + figure {
+	margin: 1.875vw 0 0 0;
+}
+.text-fixed-images__small, .text-fixed-images__square {
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
+.text-fixed-images__small {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.text-fixed-images__square {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+
+.text {
+	margin: 0 0 14.0625vw 0;
+}
+.text header {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.text div {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+
 .thumbnail-gallery {
 	margin: 0 0 14.0625vw 0;
 }
-.thumbnail-gallery .swiper-navigation {
+
+.swiper-navigation {
 	position: relative;
+	margin: 0 0 0.78125vw 0;
+}
+
+.swiper-button-prev {
+	transform: rotate(180deg);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	position: relative;
+	top: auto;
+	left: auto;
+	right: auto;
+	width: 1.717vw;
+	height: 1.246vw;
+	left: 0;
+}
+
+.copy > *:not(:last-of-type):not(li) {
+	margin: 0 0 1.025vw 0;
+}
+.copy a {
+	text-decoration: underline;
+	text-underline-offset: 0.15625vw;
 }
 
 .desktop {
@@ -861,6 +1024,10 @@ button.swiper-pagination-bullet {
 	color: #FFAABA;
 }
 
+.content-wrap {
+	padding: 1.09375vw 0 0 0;
+}
+
 .cover {
 	position: absolute;
 	top: 0;
@@ -880,6 +1047,10 @@ button.swiper-pagination-bullet {
 	grid-template-columns: repeat(4, 1fr);
 	column-gap: 1.875vw;
 	padding: 0 var(--wrap-desktop);
+}
+
+.spacious {
+	justify-content: space-between;
 }
 
 .wrap {

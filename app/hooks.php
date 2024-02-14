@@ -64,3 +64,65 @@ add_action('admin_enqueue_scripts', function() {
     }    
 
 });
+
+/**
+ * Removes buttons from the first row of the tiny mce editor
+ *
+ * @link     http://thestizmedia.com/remove-buttons-items-wordpress-tinymce-editor/
+ *
+ * @param    array    $buttons    The default array of buttons
+ * @return   array                The updated array of buttons that exludes some items
+ */
+add_filter( 'mce_buttons', 'jivedig_remove_tiny_mce_buttons_from_editor');
+function jivedig_remove_tiny_mce_buttons_from_editor( $buttons ) {
+    $remove_buttons = array(
+        'bold',
+        'italic',
+        'strikethrough',
+        'numlist',
+        'blockquote',
+        'hr', // horizontal line
+        'alignleft',
+        'aligncenter',
+        'alignright',
+        'formatselect',
+        'styleselect',
+        'wp_more', // read more link
+    );
+    foreach ( $buttons as $button_key => $button_value ) {
+        if ( in_array( $button_value, $remove_buttons ) ) {
+            unset( $buttons[ $button_key ] );
+        }
+    }
+    return $buttons;
+}
+/**
+ * Removes buttons from the second row (kitchen sink) of the tiny mce editor
+ *
+ * @link     http://thestizmedia.com/remove-buttons-items-wordpress-tinymce-editor/
+ *
+ * @param    array    $buttons    The default array of buttons in the kitchen sink
+ * @return   array                The updated array of buttons that exludes some items
+ */
+add_filter( 'mce_buttons_2', 'jivedig_remove_tiny_mce_buttons_from_kitchen_sink');
+function jivedig_remove_tiny_mce_buttons_from_kitchen_sink( $buttons ) {
+    $remove_buttons = array(
+        'formatselect', // format dropdown menu for <p>, headings, etc
+        'underline',
+        'alignjustify',
+        'forecolor', // text color
+        'pastetext', // paste as text
+        'removeformat', // clear formatting
+        'charmap', // special characters
+        'outdent',
+        'indent',
+        'strikethrough',
+        'hr'
+    );
+    foreach ( $buttons as $button_key => $button_value ) {
+        if ( in_array( $button_value, $remove_buttons ) ) {
+            unset( $buttons[ $button_key ] );
+        }
+    }
+    return $buttons;
+}

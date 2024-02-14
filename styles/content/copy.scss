@@ -1,0 +1,10 @@
+.copy {
+	> *:not(:last-of-type):not(li) {
+		margin: 0 0 1.025vw 0;
+	}
+
+	a {
+		text-decoration: underline;
+		text-underline-offset: 0.15625vw;
+	}
+}

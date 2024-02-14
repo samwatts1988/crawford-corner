@@ -22,15 +22,15 @@ a {
 
 .text {
 	&\:md {
-		font-size: clamp( 20px, 1.5625vw, 40px );
+		font-size: clamp( 1.25rem, 1.5625vw, 2.5rem );
 	}
 	&\:sf {
-		font-size: clamp( 40px, 3.125vw, 80px )
+		font-size: clamp( 2.5rem, 3.125vw, 5rem )
 	}
 }
 
 .font {
 	&\:bd {
-		font-family: 'BrutBold', sans-serif;
+		@extend %font-bd;
 	}
 }

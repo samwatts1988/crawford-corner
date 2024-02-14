@@ -1,0 +1,18 @@
+.offset-image-pair {
+	align-items: flex-start;
+	margin: 0 0 25.625vw 0;
+
+	figure {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+
+	figure:first-child {
+		margin: 14.0625vw 0 0 0;
+	}
+
+	figure + figure {
+		grid-column-start: 3;
+		grid-column-end: 5;
+	}
+}

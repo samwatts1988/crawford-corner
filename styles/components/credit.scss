@@ -1,0 +1,12 @@
+.credit {
+	a {
+		display: block;
+		margin: 1.875vw 0 0 0;
+		width: 9.375vw;
+	}
+	a:hover {
+		path {
+			fill: color( rollover );
+		}
+	}
+}
