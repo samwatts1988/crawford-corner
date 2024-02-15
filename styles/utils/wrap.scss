@@ -1,3 +1,7 @@
 .wrap {
-	padding: 0 var( --wrap-desktop );	
+	padding: 0 var( --wrap-mobile );
+
+	@include break {
+		padding: 0 var( --wrap-desktop );	
+	}	
 }

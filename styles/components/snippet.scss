@@ -1,0 +1,16 @@
+.snippets {
+	margin: 0 0 28.125vw 0;
+}
+
+.snippet {
+	flex-direction: column;
+	gap: 7.03125vw;
+
+	h2 {
+		font-size: inherit;
+	}
+
+	img {
+		width: 100%;
+	}
+}

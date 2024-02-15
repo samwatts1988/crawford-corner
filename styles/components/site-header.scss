@@ -1,18 +1,31 @@
 .site-header {
-	padding: var( --wrap-desktop ) 0;
+	padding: 3.1875rem 0;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: z( header );
 
+	@include break {
+		padding: var( --wrap-desktop ) 0;
+	}
+
 	&__title {
 		grid-column-start: 1;
-		grid-column-end: 3;
+		grid-column-end: 2;
+
+		@include break {
+			grid-column-end: 3;
+		}
 	}	
 
 	&__desc {
-		grid-column-start: 3;
-		grid-column-end: 5;
+		grid-column-start: 2;
+		grid-column-end: 3;
+
+		@include break {
+			grid-column-start: 3;
+			grid-column-end: 5;			
+		}
 	}
 }

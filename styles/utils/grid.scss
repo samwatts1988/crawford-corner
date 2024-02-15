@@ -1,6 +1,11 @@
 .grid {
 	display: grid;
-	grid-template-columns: repeat( 4, 1fr );
-	column-gap: 1.875vw;
-	padding: 0 var( --wrap-desktop );
+	grid-template-columns: repeat( 2, 1fr );
+	column-gap: 5.128vw;
+
+	@include break {
+		column-gap: 1.875vw;
+		grid-template-columns: repeat( 4, 1fr );
+		padding: 0 var( --wrap-desktop );
+	}
 }

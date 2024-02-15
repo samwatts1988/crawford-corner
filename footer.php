@@ -3,22 +3,22 @@
 
 	<?php 
 
-	$contacts = get_field( 'contacts_one' );
-	$contacts = get_field( 'contacts_two' );
+	$contacts_one = get_field( 'contacts_one' );
+	$contacts_two = get_field( 'contacts_two' );
 
 	?>
 
 	<footer class="site-footer">
 		<div class="wrap">
 			<div class="keyline content-wrap">
-				<?php cc\view( 'download' ); ?>
+				<?php //cc\view( 'download' ); ?>
 			</div>
 		</div>
 		<div class="grid">
-			<?php cc\view( 'contacts' ); ?>
-			<?php cc\view( 'contacts' ); ?>
-			<?php cc\view( 'credit' ); ?>
-			<?php cc\view( 'collaborators' ) ?>
+			<?php //cc\view( 'contacts', [ 'content' => $contacts_one ] ); ?>
+			<?php //cc\view( 'contacts', [ 'content' => $contacts_two ] ); ?>
+			<?php //cc\view( 'credit' ); ?>
+			<?php //cc\view( 'collaborators' ) ?>
 		</div>
 	</footer>
 

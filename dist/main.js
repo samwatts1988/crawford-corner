@@ -337,8 +337,7 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 
 	var thumbnails = new Swiper('.swiper-thumbnail-gallery', {
 	  speed: 750,
-	  slidesPerView: 2,
-	  spaceBetween: 24,
+	  spaceBetween: 20,
 	  loop: true,
 	  keyboard: {
 	  	enabled: true
@@ -346,6 +345,12 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 	  navigation: {
 	  	prevEl: '.swiper-button-prev',
 	  	nextEl: '.swiper-button-next'
+	  },
+	  breakpoint: {
+	  	960: {
+	  		slidesPerView: 2,
+	  		spaceBetween: 24
+	  	}
 	  }
 	});
 

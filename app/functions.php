@@ -76,3 +76,18 @@ function view( $name, $vars = [] ) {
 
 	return $__file;
 }
+
+/**
+* Format telephone number link
+*
+* @param  string 	$tel
+*/
+function format_tel( $tel ) {
+
+	$tel 	= 	str_replace( '+', '', $tel );
+	$tel 	= 	str_replace( '(', '', $tel );
+	$tel 	= 	str_replace( ')', '', $tel );
+	$tel 	= 	str_replace( ' ', '', $tel );
+	return "tel:+" . $tel;
+
+}

@@ -3,7 +3,11 @@ html {
 }
 
 body {
-	font-size: clamp( 1rem, 1.25vw, 2rem );
+	font-size: clamp( 1rem, 4.102vw, 2.46rem );
+
+	@include break {
+		font-size: clamp( 1rem, 1.25vw, 2rem );
+	}
 }
 
 a {
@@ -20,12 +24,24 @@ a {
 	}
 }
 
+ul {
+	list-style: none;
+}
+
 .text {
 	&\:md {
-		font-size: clamp( 1.25rem, 1.5625vw, 2.5rem );
+		font-size: clamp( 1rem, 4.10256vw, 2.46rem );
+
+		@include break {
+			font-size: clamp( 1.25rem, 1.5625vw, 2.5rem );
+		}
 	}
 	&\:sf {
-		font-size: clamp( 2.5rem, 3.125vw, 5rem )
+		font-size: clamp( 1.625rem, 6.66vw, 4rem );
+
+		@include break {
+			font-size: clamp( 2.5rem, 3.125vw, 5rem );
+		}
 	}
 }
 

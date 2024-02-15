@@ -1,3 +1,7 @@
 .ar\:hero {
-	@include ar( 720, 1280 );
+	height: 100vh;
+
+	@include break {
+		@include ar( 720, 1280 );
+	}
 }

@@ -1,7 +1,9 @@
 .thumbnail-gallery {
-	margin: 0 0 14.0625vw 0;
+	margin: 0 0 61.534vw 0;
 
-	
+	@include break {
+		margin: 0 0 14.0625vw 0;
+	}
 }
 
 .swiper-navigation {
@@ -19,7 +21,12 @@
 	top: auto;
 	left: auto;
 	right: auto;
-	width: 1.717vw;
-	height: 1.246vw;
 	left: 0;
+	height: 4.089vw;
+	width: 5.55vw;
+
+	@include break {
+		width: 1.717vw;
+		height: 1.246vw;		
+	}
 }
