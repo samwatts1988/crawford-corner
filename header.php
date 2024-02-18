@@ -6,7 +6,7 @@
 	<script>document.documentElement.className='has-js';</script>
 	<?php wp_head() ?>
 </head>
-<body <?php body_class( 'bg:light' ) ?>>
+<body <?php body_class( 'bg:light splash-visible' ) ?>>
 	<?php wp_body_open() ?>
 
 	<header class="site-header">

@@ -169,17 +169,23 @@ ul {
 	align-items: center;
 }
 .download svg {
-	display: block;
-	margin: 0.390625vw 1.875vw 0 0;
-	height: 1.24609375vw;
-	width: 1.69375vw;
+	transform: translateX(0vw);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	margin: 1.28vw 6.15vw 0 0;
+	height: 4.089vw;
+	width: 5.55vw;
 }
-.download svg g {
-	fill: #735D53;
-	transition: fill 250ms ease;
+
+.error {
+	height: 100vh;
 }
-.download:hover g {
-	fill: #FFAABA;
+.error .standfirst {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	padding: 13.59375vw 2vw 27.96875vw 0;
+}
+.error .download {
+	margin: 10.255vw 0 0 0;
 }
 
 /**
@@ -829,8 +835,37 @@ body > :first-child {
 	.desktop {
 		display: block;
 	}
+	.download svg {
+		display: block;
+		margin: 0.390625vw 1.875vw 0 0;
+		height: 1.24609375vw;
+		width: 1.69375vw;
+	}
+	.error .download {
+		margin: 3.59375vw 0 0 0;
+	}
 	.mobile {
 		display: none;
+	}
+}
+@media screen and (max-width: 860px) {
+	.download {
+		font-size: clamp(1.25rem, 5.12vw, 49.22px);
+	}
+	.error .grid {
+		padding: 61.53vw var(--wrap-mobile) 61.53vw var(--wrap-mobile);
+	}
+}
+@media (hover: hover) {
+	.download svg g {
+		fill: #735D53;
+		transition: fill 250ms ease;
+	}
+	.download:hover g {
+		fill: #FFAABA;
+	}
+	.download:hover svg {
+		transform: translateX(0.25vw);
 	}
 }
 /*# sourceMappingURL=editor.css.map */

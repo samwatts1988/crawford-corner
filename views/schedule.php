@@ -15,9 +15,9 @@ $heading = get_field( 'schedule_heading' );
 		<table class="keyline content-wrap">
 			<thead>
 				<tr>
-					<td class="font:bd text:md">Floor</td>
-					<td class="font:bd text:md">SQFT</td>
-					<td class="font:bd text:md">SQM</td>
+					<th class="font:bd text:md">Floor</th>
+					<th class="font:bd text:md">SQFT</th>
+					<th class="font:bd text:md">SQM</th>
 				</tr>
 			</thead>
 			<tbody>

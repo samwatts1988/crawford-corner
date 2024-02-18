@@ -24,9 +24,9 @@ $gallery = get_field( 'standfirst_gallery' );
 						<div class="swiper-slide">
 							<figure class="ar ar:square">
 								<img 
-									src="<?php echo $image[ 'url' ]; ?>" 
+									data-src="<?php echo $image[ 'url' ]; ?>" 
 									alt="<?php echo get_bloginfo( 'name' ); ?>" 
-									class="cover"
+									class="swiper-lazy cover"
 								>
 							</figure>		
 						</div>

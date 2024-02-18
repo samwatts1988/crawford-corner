@@ -1,19 +1,36 @@
 .schedule-of-areas {
-	padding: 0 0 14.0625vw 0;
+	padding: 0 var( --wrap-mobile ) 30.769vw var( --wrap-mobile );
 
+	@include break {
+		padding: 0 0 14.0625vw 0;
+	}
+
+	table,
 	header {
 		grid-column-start: 1;
 		grid-column-end: 3;
 	}
 
+	th,
 	td {
-		padding: 1.09375vw 0 1.40625vw 0;
+		padding: 5.12vw 0;
+
+		@include break {
+			padding: 1.09375vw 0 1.40625vw 0;
+		}
+	}
+
+	th {
+		text-align: left;
 	}
 
 	table {
 		border-bottom: 1px solid color( body );
-		grid-column-start: 3;
-		grid-column-end: 5;
+
+		@include break {
+			grid-column-start: 3;
+			grid-column-end: 5;
+		}
 	}
 
 	tbody tr:last-child td {

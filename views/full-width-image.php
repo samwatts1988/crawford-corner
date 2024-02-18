@@ -9,7 +9,8 @@ if( $image[ 'url' ] ) :
 		<img 
 			width="<?php $image[ 'width' ]; ?>"
 			height="<?php $image[ 'height' ]; ?>"
-			src="<?php echo $image[ 'url' ]; ?>" 
+			src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+			data-lazy="<?php echo $image[ 'url' ]; ?>" 
 			alt="<?php echo get_bloginfo( 'name' ); ?>"
 		>	
 	</figure>

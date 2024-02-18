@@ -1,6 +1,12 @@
 .offset-image-pair {
 	align-items: flex-start;
-	margin: 0 0 25.625vw 0;
+	padding: 0 var( --wrap-mobile );
+	margin: 0 0 61.538vw 0;
+
+	@include break {
+		margin: 0 0 25.625vw 0;
+		padding: 0;
+	}
 
 	figure {
 		grid-column-start: 1;
@@ -8,11 +14,15 @@
 	}
 
 	figure:first-child {
-		margin: 14.0625vw 0 0 0;
+		@include break {
+			margin: 14.0625vw 0 0 0;
+		}
 	}
 
 	figure + figure {
-		grid-column-start: 3;
-		grid-column-end: 5;
+		@include break {
+			grid-column-start: 3;
+			grid-column-end: 5;
+		}
 	}
 }

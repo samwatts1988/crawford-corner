@@ -9,6 +9,7 @@ $typography: (
 
 $z-index: (
 	header : 20,
+	splash: 10,
 	nav: 1000,
 );
 
@@ -18,7 +19,8 @@ $colors: (
 	body   : #735D53,
 	light  : #FCF6F4,
 	primary: #0073AA,
-	rollover: #FFAABA
+	rollover: #FFAABA,
+	login : #C4B9B1
 );
 
 $points: (
@@ -28,3 +30,5 @@ $points: (
 	large  : rem(1024px),
 	x-large: rem(1296px),
 );
+
+

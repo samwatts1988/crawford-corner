@@ -1,8 +1,13 @@
 .credit {
 	a {
 		display: block;
-		margin: 1.875vw 0 0 0;
-		width: 9.375vw;
+		margin: 6.1538vw 0 0 0;
+		width: 30.762vw;
+
+		@include break {
+			margin: 1.875vw 0 0 0;
+			width: 9.375vw;
+		}
 	}
 
 	path {

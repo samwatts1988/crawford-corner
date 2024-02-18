@@ -1,0 +1,23 @@
+.error {
+	height: 100vh;
+
+	.grid {
+		@media screen and ( max-width: $breakpoint ) {
+			padding: 61.53vw var(--wrap-mobile) 61.53vw var(--wrap-mobile)
+		}
+	}
+
+	.standfirst {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		padding: 13.59375vw 2vw 27.96875vw 0;
+	}
+
+	.download {
+		margin: 10.255vw 0 0 0;
+
+		@include break {
+			margin: 3.59375vw 0 0 0;
+		}
+	}
+}

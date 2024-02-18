@@ -1,20 +1,42 @@
 .download {
 	align-items: center;
 	svg {
-		display: block;
-		margin: 0.390625vw 1.875vw 0 0;
-		height: 1.24609375vw;
-		width: 1.69375vw;
+		transform: translateX(0vw);
+		transition: transform 250ms cubic-bezier( 0.4, 0, 0.2, 1 );
+		margin: 1.28vw 6.15vw 0 0;
+		height: 4.089vw;
+		width: 5.55vw;
+
+		@include break {
+			display: block;
+			margin: 0.390625vw 1.875vw 0 0;
+			height: 1.24609375vw;
+			width: 1.69375vw;
+		}
 
 		g {
-			fill: color( body );
-			transition: fill 250ms ease;
+			@media( hover: hover ) {
+				fill: color( body );
+				transition: fill 250ms ease;
+			}
 		}
 	}
 
 	&:hover {
 		g {
-			fill: color( rollover );
+			@media ( hover: hover ) {
+				fill: color( rollover );
+			}
 		}
+
+		svg {
+			@media ( hover: hover ) {
+				transform: translateX(0.25vw);
+			}
+		}
+	}
+
+	@media screen and ( max-width: $breakpoint ) {
+		font-size: clamp( 1.25rem, 5.12vw, 49.22px );
 	}
 }

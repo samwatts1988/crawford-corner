@@ -25,12 +25,24 @@ $square_img = get_field( 'large_image' );
 		<div class="text-fixed-images__small">
 			<figure>
 				<?php if( $small_img_one[ 'url' ] ) : ?>
-					<img src="<?php echo $small_img_one[ 'url' ]; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
+					<img 
+						width="<?php echo $small_img_one[ 'width' ]; ?>"
+						height="<?php echo $small_img_one[ 'height' ]; ?>"
+						src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+						data-lazy="<?php echo $small_img_one[ 'url' ]; ?>" 
+						alt="<?php echo get_bloginfo( 'name' ); ?>"
+					>
 				<?php endif; ?>
 			</figure>
 			<figure>
 				<?php if( $small_img_two[ 'url' ] ) : ?>
-					<img src="<?php echo $small_img_two[ 'url' ]; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
+					<img 
+						width="<?php echo $small_img_two[ 'width' ]; ?>"
+						height="<?php echo $small_img_two[ 'height' ]; ?>"
+						src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+						data-lazy="<?php echo $small_img_two[ 'url' ]; ?>" 
+						alt="<?php echo get_bloginfo( 'name' ); ?>"
+					>
 				<?php endif; ?>
 			</figure>
 		</div>
@@ -38,7 +50,10 @@ $square_img = get_field( 'large_image' );
 		<figure class="ar ar:square text-fixed-images__square">
 			<?php if( $square_img[ 'url' ] ) : ?>
 				<img 
-					src="<?php echo $square_img[ 'url' ]; ?>" 
+					width="<?php echo $square_img[ 'width' ]; ?>"
+					height="<?php echo $square_img[ 'height' ]; ?>"
+					src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+					data-lazy="<?php echo $square_img[ 'url' ]; ?>" 
 					alt="<?php echo get_bloginfo( 'name' ); ?>" 
 					class="cover"
 				>

@@ -162,7 +162,7 @@
         },
         {
             "key": "field_65cbd6eaabe88",
-            "label": "Brochure PDF",
+            "label": "Brochure Link",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -179,10 +179,10 @@
         },
         {
             "key": "field_65cbd6f4abe89",
-            "label": "Brochure PDF",
+            "label": "Brochure Link",
             "name": "brochure_pdf",
             "aria-label": "",
-            "type": "file",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -191,11 +191,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": "pdf"
+            "return_format": "array"
         },
         {
             "key": "field_65cd1d5b5e39d",
@@ -1097,5 +1093,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708033007
+    "modified": 1708286245
 }

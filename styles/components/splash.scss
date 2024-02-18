@@ -1,0 +1,27 @@
+.splash {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: z( splash );
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 750ms ease, visibility 750ms ease;
+
+	&-visible {
+		overflow: hidden;
+
+		.site-header a,
+		.site-header p {
+			color: color( light );
+		}
+	}
+
+	&-hidden {
+		.splash {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}

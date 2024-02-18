@@ -11,7 +11,11 @@
 	  },
 	  autoplay: {
 	  	delay: 4000
-	  }
+	  },
+	  preloadImages: false,
+	  loadPrevNext: true,
+	  loadPrevNextAmount: 3,
+	  lazy: true
 	});
 
 })( jQuery );

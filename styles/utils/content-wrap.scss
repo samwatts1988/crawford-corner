@@ -1,3 +1,7 @@
 .content-wrap {
-	padding: 1.09375vw 0 0 0;
+	padding: 5.128vw 0 0 0;
+
+	@include break {
+		padding: 1.09375vw 0 0 0;
+	}
 }

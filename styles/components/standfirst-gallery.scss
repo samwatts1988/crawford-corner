@@ -1,19 +1,35 @@
 .standfirst-gallery {
-	margin: 0 0 28.125vw 0;
+	padding: 0 var( --wrap-mobile );
+	
+	@include break {
+		padding: 0;
+		margin: 0 0 28.125vw 0;
+	}
 
+	.gallery,
 	.standfirst {
 		grid-column-start: 1;
 		grid-column-end: 3;
 	}
 
+	.standfirst {
+		margin: 0 0 30.769vw 0;
+	}
+
 	.gallery {
-		transform: translateY( -2.34375vw );
 		width: 100%;
-		grid-column-start: 3;
-		grid-column-end: 5;
+
+
+		@include break {
+			transform: translateY( -2.34375vw );
+			grid-column-start: 3;
+			grid-column-end: 5;			
+		}
 
 		.swiper-navigation {
-			padding: 0 0 2.5vw 0;
+			@include break {
+				padding: 0 0 2.5vw 0;
+			}
 		}
 
 		.swiper-button-prev {

@@ -13,7 +13,11 @@
 	  navigation: {
 	  	prevEl: '.swiper-button-prev',
 	  	nextEl: '.swiper-button-next'
-	  }
+	  },
+  	  preloadImages: false,
+	  loadPrevNext: true,
+	  loadPrevNextAmount: 3,
+	  lazy: true
 	});
 
 })( jQuery );

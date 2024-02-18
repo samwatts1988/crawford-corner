@@ -11,7 +11,13 @@
 
 	<?php if( $image ) : ?>
 		<figure>
-			<img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo $heading; ?>">
+			<img 
+				width="<?php echo $image[ 'width' ]; ?>"
+				height="<?php echo $image[ 'height' ]; ?>"
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+				data-lazy="<?php echo $image[ 'url' ]; ?>" 
+				alt="<?php echo $heading; ?>"
+			>
 		</figure>
 	<?php endif; ?>
 </article>

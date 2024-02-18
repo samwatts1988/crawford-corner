@@ -4,8 +4,9 @@
     "fields": [
         {
             "key": "field_5d038507f34e9",
-            "label": "Contact Details",
+            "label": "404 Page",
             "name": "",
+            "aria-label": "",
             "type": "accordion",
             "instructions": "",
             "required": 0,
@@ -20,27 +21,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_5d038527f34ea",
-            "label": "Email",
-            "name": "contact_email",
-            "type": "email",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_5d0385d6f34eb",
-            "label": "Phone",
-            "name": "contact_phone",
+            "key": "field_65d25c1086d8d",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -51,16 +35,17 @@
                 "id": ""
             },
             "default_value": "",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
-            "key": "field_5ccb0dc0daf3a",
-            "label": "Social Networks",
-            "name": "networks",
-            "type": "repeater",
+            "key": "field_65d25c1486d8e",
+            "label": "Content",
+            "name": "content",
+            "aria-label": "",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -69,56 +54,11 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5ccb0dccdaf3b",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Add Network",
-            "sub_fields": [
-                {
-                    "key": "field_5ccb0dccdaf3b",
-                    "label": "Network",
-                    "name": "name",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "facebook": "Facebook",
-                        "twitter": "Twitter",
-                        "linkedin": "LinkedIn",
-                        "instagram": "Instagram"
-                    },
-                    "default_value": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_5ccb0df0daf3c",
-                    "label": "URL",
-                    "name": "url",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "80",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                }
-            ]
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -136,7 +76,8 @@
     "label_placement": "top",
     "instruction_placement": "field",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1560530934
+    "show_in_rest": 0,
+    "modified": 1708285280
 }

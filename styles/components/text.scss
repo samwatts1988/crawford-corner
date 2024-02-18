@@ -1,12 +1,35 @@
 .text {
-	margin: 0 0 14.0625vw 0;
-	header {
+	padding: 0 var( --wrap-mobile );
+	margin: 0 0 30.762vw 0;
+
+	@include break {
+		padding: 0;
+		margin: 0 0 14.0625vw 0;
+	}
+
+	header,
+	div {
 		grid-column-start: 1;
 		grid-column-end: 3;
 	}
 
+	header {
+		@include break {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+	}
+
 	div {
-		grid-column-start: 3;
-		grid-column-end: 5;
+		@include break {
+			grid-column-start: 3;
+			grid-column-end: 5;
+		}
+
+		&.keyline {
+			@media screen and ( max-width: $breakpoint ) {
+				border-top: unset;
+			}
+		}
 	}
 }

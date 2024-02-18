@@ -9,18 +9,16 @@
 						<figure class="ar ar:hero">
 							<?php if( get_sub_field( 'desktop' )[ 'url' ] ) : ?>
 								<img 
-									class="cover desktop" 
-									src="<?php echo get_sub_field( 'desktop' )[ 'url' ]; ?>" 
-									alt="<?php echo get_bloginfo( 'name' ); ?>
-								">
+									class="swiper-lazy cover desktop" 
+									data-src="<?php echo get_sub_field( 'desktop' )[ 'url' ]; ?>" 
+									alt="<?php echo get_bloginfo( 'name' ); ?>">
 							<?php endif; ?>
 				
 							<?php if( get_sub_field( 'mobile' )[ 'url' ] ) : ?>
 								<img 
-									class="cover mobile" 
-									src="<?php echo get_sub_field( 'mobile' )[ 'url' ]; ?>" 
-									alt="<?php echo get_bloginfo( 'name' ); ?>
-								">
+									class="swiper-lazy cover mobile" 
+									data-src="<?php echo get_sub_field( 'mobile' )[ 'url' ]; ?>" 
+									alt="<?php echo get_bloginfo( 'name' ); ?>">
 							<?php endif; ?>
 						</figure>
 					</div>

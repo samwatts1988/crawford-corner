@@ -9,7 +9,10 @@ $image_two = get_field( 'offset_image_two' );
 	<figure class="ar ar:square">
 		<?php if( $image_one[ 'url' ] ) : ?>
 			<img 
-				src="<?php echo $image_one[ 'url' ]; ?>" 
+				width="<?php echo $image_one[ 'width' ]; ?>"
+				height="<?php echo $image_one[ 'height' ]; ?>"
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+				data-lazy="<?php echo $image_one[ 'url' ]; ?>" 
 				alt="<?php echo get_bloginfo( 'name' ); ?>" 
 				class="cover"
 			>
@@ -18,7 +21,10 @@ $image_two = get_field( 'offset_image_two' );
 	<figure class="ar ar:square">
 		<?php if( $image_two[ 'url' ] ) : ?>
 			<img 
-				src="<?php echo $image_two[ 'url' ]; ?>" 
+				width="<?php echo $image_two[ 'width' ]; ?>"
+				height="<?php echo $image_two[ 'height' ]; ?>"
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+				data-lazy="<?php echo $image_two[ 'url' ]; ?>" 
 				alt="<?php echo get_bloginfo( 'name' ); ?>" 
 				class="cover"
 			>

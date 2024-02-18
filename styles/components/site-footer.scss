@@ -1,8 +1,30 @@
 .site-footer {
 	> * {
-		padding: 0 var( --wrap-desktop );
+		padding: 0 var( --wrap-mobile );
+
+		@include break {
+			padding: 0 var( --wrap-desktop );
+		}
 	}
+
+	.content-wrap {
+		@media screen and ( max-width: $breakpoint ) {
+			padding: 10.256vw 0 0 0;
+		}
+	}
+
 	> .grid {
-		margin: 1.5625vw 0 14.0625vw 0;
+		margin: 0 0 172vw 0;
+
+		@include break {
+			margin: 1.5625vw 0 14.0625vw 0;
+		}
+
+		article {
+			@media screen and ( max-width: $breakpoint ) {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+		}
 	}
 }

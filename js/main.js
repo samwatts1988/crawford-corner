@@ -10,14 +10,14 @@
 		$(document.documentElement).toggleClass('has-nav');
 	});
 
-	$('img[data-src]').lazy(function () {
+	$('img[data-lazy]').lazy(function () {
 		this.style.opacity = '0';
 
 		$(this).one('load', () => this.style.opacity = '').attr({
-			src: this.getAttribute('data-src'),
+			src: this.getAttribute('data-lazy'),
 			sizes: this.getAttribute('data-sizes'),
 			srcset: this.getAttribute('data-srcset'),
-			'data-src': null,
+			'data-lazy': null,
 			'data-sizes': null,
 			'data-srcset': null
 		});

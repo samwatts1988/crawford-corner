@@ -21,7 +21,11 @@ $thumbnails = get_field( 'thumbnail_gallery' );
 				<?php foreach( $thumbnails as $image ) : ?>
 					<div class="swiper-slide">
 						<figure class="ar ar:square">
-							<img class="cover" src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
+							<img 
+								class="swiper-lazy cover" 
+								data-src="<?php echo $image[ 'url' ]; ?>" 
+								alt="<?php echo get_bloginfo( 'name' ); ?>"
+							>
 						</figure>
 					</div>
 				<?php endforeach; ?>
