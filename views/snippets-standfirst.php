@@ -5,7 +5,7 @@ $standfirst = get_field( 'snippets_standfirst' );
 ?>
 
 <section class="snippets-standfirst">
-	<div class="snippets grid">
+	<div data-step-reveal class="snippets grid">
 		<?php while( have_rows( 'snippet' ) ) : the_row(); 
 			cc\view( 'snippet', [ 
 				'heading' => get_sub_field( 'heading' ),

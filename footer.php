@@ -9,12 +9,12 @@
 	?>
 
 	<footer class="site-footer">
-		<div class="wrap">
+		<div data-reveal class="wrap">
 			<div class="keyline content-wrap">
 				<?php cc\view( 'download' ); ?>
 			</div>
 		</div>
-		<div class="grid">
+		<div data-reveal class="grid">
 			<?php cc\view( 'contacts', [ 'content' => $contacts_one ] ); ?>
 			<?php cc\view( 'contacts', [ 'content' => $contacts_two ] ); ?>
 			<?php cc\view( 'credit' ); ?>

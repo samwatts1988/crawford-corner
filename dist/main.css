@@ -789,6 +789,28 @@ ul {
 	opacity: 1;
 }
 
+[data-step-reveal] > * {
+	opacity: 0;
+	transition: opacity 500ms ease;
+	transition-delay: 250ms;
+}
+[data-step-reveal] > *:nth-of-type(1) {
+	transition-delay: 250ms;
+}
+[data-step-reveal] > *:nth-of-type(2) {
+	transition-delay: 500ms;
+}
+[data-step-reveal] > *:nth-of-type(3) {
+	transition-delay: 750ms;
+}
+[data-step-reveal] > *:nth-of-type(4) {
+	transition-delay: 1000ms;
+}
+
+[data-step-reveal=revealed] > * {
+	opacity: 1;
+}
+
 .spacious {
 	justify-content: space-between;
 }

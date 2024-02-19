@@ -7,3 +7,19 @@
 [data-reveal="revealed"] {
 	opacity: 1;
 }
+
+[data-step-reveal] > * {
+	opacity: 0;
+	transition: opacity 500ms ease;
+	transition-delay: 250ms;
+
+	@for $i from 1 to 5 {
+  		&:nth-of-type(#{$i}) {
+  			transition-delay: $i * 250ms;
+  		}
+	}
+}
+
+[data-step-reveal="revealed"] > * {
+	opacity: 1;
+}

@@ -374,6 +374,15 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 	if( !$( '[data-reveal]' ).length ) { return; }
 	reveal();
 
+	stepReveal = function() {
+		$('[data-step-reveal]').lazy(function() {
+			$(this).attr('data-step-reveal', 'revealed');
+		});
+	}
+
+	if( !$( '[data-step-reveal]' ).length ) { return; }
+	stepReveal();
+
 
 })( jQuery );
 (function ($) {
