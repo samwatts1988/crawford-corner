@@ -5,7 +5,7 @@ $thumbnails = get_field( 'thumbnail_gallery' );
 ?>
 
 <?php if( $thumbnails ) : ?>
-	<section class="thumbnail-gallery wrap">
+	<section data-reveal class="thumbnail-gallery wrap">
 		<h2 class="screen-reader-text">Thumbnail Gallery for <?php echo bloginfo( 'name' ); ?></h2>
 		
 		<div class="swiper-navigation flex spacious">

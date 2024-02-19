@@ -6,7 +6,7 @@ $text = get_field( 'text_text' );
 ?>
 
 <section class="text">
-	<article class="grid">
+	<article data-reveal class="grid">
 		<header class="keyline content-wrap">
 			<?php if( $heading ) : ?>
 				<h2 class="font:bd text:md"><?php echo $heading; ?></h2>

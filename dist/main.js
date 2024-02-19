@@ -365,6 +365,19 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 
 (function ($) {
 
+	reveal = function() {
+		$('[data-reveal]').lazy(function() {
+			$(this).attr('data-reveal', 'revealed');
+		});
+	}
+
+	if( !$( '[data-reveal]' ).length ) { return; }
+	reveal();
+
+
+})( jQuery );
+(function ($) {
+
 	if( !$( '.swiper-standfirst-gallery' ) ) { return; }
 
 	var thumbnails = new Swiper('.swiper-standfirst-gallery', {

@@ -27,7 +27,7 @@
 		</div>
 
 		<article class="hero__standfirst grid">
-			<div class="font:bd text:sf">
+			<div data-reveal class="font:bd text:sf">
 				<?php echo get_field( 'lead_standfirst' ); ?>
 				<?php cc\view( 'download' ); ?>
 			</div>

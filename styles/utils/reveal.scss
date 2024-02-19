@@ -1,0 +1,9 @@
+[data-reveal] {
+	opacity: 0;
+	transition: opacity 500ms ease;
+	transition-delay: 250ms;
+}
+
+[data-reveal="revealed"] {
+	opacity: 1;
+}

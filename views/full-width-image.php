@@ -5,7 +5,7 @@ $image = get_field( 'full_width_image' );
 if( $image[ 'url' ] ) :
 
 ?>
-	<figure class="full-width-image wrap">
+	<figure data-reveal class="full-width-image wrap">
 		<img 
 			width="<?php $image[ 'width' ]; ?>"
 			height="<?php $image[ 'height' ]; ?>"

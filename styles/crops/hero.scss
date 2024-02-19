@@ -1,5 +1,5 @@
 .ar\:hero {
-	height: 100vh;
+	height: calc( 100vh + 2px );
 
 	@include break {
 		@include ar( 720, 1280 );

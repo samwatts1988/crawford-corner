@@ -9,7 +9,7 @@ $square_img = get_field( 'large_image' );
 ?>
 
 <section class="text-fixed-images">
-	<article class="grid">
+	<article data-reveal class="grid">
 		<header class="keyline content-wrap">
 			<?php if( $heading ) : ?>
 				<h2 class="font:bd text:md"><?php echo $heading; ?></h2>
@@ -23,7 +23,7 @@ $square_img = get_field( 'large_image' );
 
 	<div class="grid">
 		<div class="text-fixed-images__small">
-			<figure>
+			<figure data-reveal>
 				<?php if( $small_img_one[ 'url' ] ) : ?>
 					<img 
 						width="<?php echo $small_img_one[ 'width' ]; ?>"
@@ -34,7 +34,7 @@ $square_img = get_field( 'large_image' );
 					>
 				<?php endif; ?>
 			</figure>
-			<figure>
+			<figure data-reveal>
 				<?php if( $small_img_two[ 'url' ] ) : ?>
 					<img 
 						width="<?php echo $small_img_two[ 'width' ]; ?>"
@@ -47,7 +47,7 @@ $square_img = get_field( 'large_image' );
 			</figure>
 		</div>
 
-		<figure class="ar ar:square text-fixed-images__square">
+		<figure data-reveal class="ar ar:square text-fixed-images__square">
 			<?php if( $square_img[ 'url' ] ) : ?>
 				<img 
 					width="<?php echo $square_img[ 'width' ]; ?>"

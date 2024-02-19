@@ -16,7 +16,7 @@ $standfirst = get_field( 'snippets_standfirst' );
 	</div>
 
 	<?php if( $standfirst ) : ?>
-		<div class="grid">
+		<div data-reveal class="grid">
 			<div class="standfirst font:bd text:sf"><?php echo $standfirst; ?></div>
 		</div>
 	<?php endif; ?>

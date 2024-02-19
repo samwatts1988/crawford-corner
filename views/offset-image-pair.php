@@ -6,7 +6,7 @@ $image_two = get_field( 'offset_image_two' );
 ?>
 
 <section class="offset-image-pair grid">
-	<figure class="ar ar:square">
+	<figure data-reveal class="ar ar:square">
 		<?php if( $image_one[ 'url' ] ) : ?>
 			<img 
 				width="<?php echo $image_one[ 'width' ]; ?>"
@@ -18,7 +18,7 @@ $image_two = get_field( 'offset_image_two' );
 			>
 		<?php endif; ?>
 	</figure>
-	<figure class="ar ar:square">
+	<figure data-reveal class="ar ar:square">
 		<?php if( $image_two[ 'url' ] ) : ?>
 			<img 
 				width="<?php echo $image_two[ 'width' ]; ?>"
