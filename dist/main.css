@@ -238,6 +238,9 @@ ul {
 .schedule-of-areas table {
 	border-bottom: 1px solid #735D53;
 }
+.site-footer {
+	padding: 0 0 1.25rem 0;
+}
 .site-footer > * {
 	padding: 0 var(--wrap-mobile);
 }
@@ -838,6 +841,9 @@ ul {
 	.schedule-of-areas table {
 		grid-column-start: 3;
 		grid-column-end: 5;
+	}
+	.site-footer {
+		padding: 0 0 1.625rem 0;
 	}
 	.site-footer > * {
 		padding: 0 var(--wrap-desktop);

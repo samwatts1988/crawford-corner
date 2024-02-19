@@ -22,7 +22,7 @@
 		</div>
 
 		<div class="footer-lottie">
-			<lottie-player class="wrap desktop" autoplay loop src="<?php echo get_stylesheet_directory_uri(); ?>/js/lotties/CC_Logo_Animation_Footer.json"  background="transparent" speed="1"  style="width: 100%;"></lottie-player>		
+			<lottie-player src="<?php echo get_stylesheet_directory_uri(); ?>/js/lotties/CC_Logo_Animation_Footer.json"  background="transparent" speed="1"  style="width: 100%;"></lottie-player>		
 		</div>
 
 	</footer>

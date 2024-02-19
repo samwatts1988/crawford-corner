@@ -19,8 +19,6 @@
 
 	let footerLottie = document.querySelector( '.footer-lottie' );
 	let footerLottieEl = footerLottie.querySelector( 'lottie-player' );
-	footerLottieEl.stop();
-	footerLottieEl.seek(0);
 	
 	function setFooterLottie() {
 		if( footerLottie.getBoundingClientRect().top < window.innerHeight ) {
@@ -29,6 +27,10 @@
 			console.log("B");
 		}
 	}
+
+	footerLottieEl.addEventListener( 'complete', () => {
+		footerLottieEl.pause();
+	});
 
 	window.addEventListener( 'scroll', () => {
 		setFooterLottie();

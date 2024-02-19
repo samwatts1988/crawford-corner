@@ -310,8 +310,6 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 
 	var footerLottie = document.querySelector( '.footer-lottie' );
 	var footerLottieEl = footerLottie.querySelector( 'lottie-player' );
-	footerLottieEl.stop();
-	footerLottieEl.seek(0);
 	
 	function setFooterLottie() {
 		if( footerLottie.getBoundingClientRect().top < window.innerHeight ) {
@@ -320,6 +318,10 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 			console.log("B");
 		}
 	}
+
+	footerLottieEl.addEventListener( 'complete', function () {
+		footerLottieEl.pause();
+	});
 
 	window.addEventListener( 'scroll', function () {
 		setFooterLottie();
