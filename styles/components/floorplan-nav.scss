@@ -2,8 +2,8 @@
 	position: relative;
 
 	ul {
-		margin: 2.5vw 0 0 0;
-		padding: 0 0.625vw 0 0.625vw;
+		margin: 6vw 0 0 0;
+		padding: 0 1.75vw 0 1.75vw;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -12,8 +12,17 @@
 		height: 0;
 		width: 100%;
 
+		@include break {
+			margin: 2.5vw 0 0 0;
+			padding: 0 0.625vw 0 0.625vw;
+		}
+
 		li:last-child {
-			padding: 0 0 1.25vw 0;
+			padding: 0 0 4vw 0;
+
+			@include break {
+				padding: 0 0 1.25vw 0;
+			}
 		}
 	}
 
@@ -42,11 +51,17 @@
 		}
 
 		svg {
-			transform: rotate(0deg);
+			transform: rotate( 0deg );
 			transition: transform 250ms ease;
-			margin: 0.39vw 0 0 0.234vw;
-			height: 0.62vw;
-			width: 1.24vw;
+			margin: 1.28vw 0 1.538vw 1.282vw;
+			height: 2.0512vw;
+			width: 4.089vw;
+
+			@include break {
+				margin: 0.39vw 0 0 0.234vw;
+				height: 0.62vw;
+				width: 1.24vw;
+			}
 		}
 	}
 }

@@ -1,11 +1,30 @@
 .floorplan {
 	&__size {
-		margin: 0 0 1.5625vw 0;
+		margin: 0 0 3.84vw 0;
+
+		@include break {
+			margin: 0 0 1.5625vw 0;
+		}
 	}
 }
 
 .floorplans {
-	margin: 0 0 27.73vw 0;
+	margin: 0 0 61.53vw 0;
+
+	img {
+		width: 100%;
+	}
+
+	@include break {
+		margin: 0 0 27.73vw 0;
+	}
+
+	.grid {
+		@media screen and ( max-width: $breakpoint ) {
+			padding: 0 var( --wrap-mobile );
+			row-gap: 15.89vw;
+		}
+	}
 
 	[data-floor-plan],
 	[data-floor-info] {
@@ -19,10 +38,26 @@
 	&__details {
 		grid-column-start: 1;
 		grid-column-end: 2;
+
+		@media screen and ( max-width: $breakpoint ) {
+			grid-row-start: 1;
+			grid-row-end: 1;
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
 	}
 
 	&__plan {
 		grid-column-start: 2;
 		grid-column-end: 5;
+
+		@media screen and ( max-width: $breakpoint ) {
+			grid-row-start: 2;
+			grid-row-end: 2;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			border-top: unset;
+			padding-top: 0;
+		}
 	}
 }

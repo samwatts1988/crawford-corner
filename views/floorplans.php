@@ -1,6 +1,6 @@
 <section class="floorplans">
 	<div class="grid">
-		<aside class="floorplans__details keyline content-wrap">
+		<aside data-reveal class="floorplans__details keyline content-wrap">
 			<nav class="floorplan-nav">
 				<?php if( get_field( 'floor' )[0][ 'floor' ] ) : ?>
 					<p class="floorplan-nav__current font:bd text:md flex">
@@ -39,7 +39,7 @@
 			<?php endwhile; ?>
 		</aside>
 
-		<div class="floorplans__plan keyline content-wrap">
+		<div data-reveal class="floorplans__plan keyline content-wrap">
 			<?php $counter = 0; while( have_rows( 'floor' ) ) : the_row(); $counter++; ?>
 				<div<?php if( $counter === 1 ) : ?> class="active"<?php endif; ?> data-floor-plan="<?php echo get_sub_field( 'floor' ); ?>">
 					<figure>
