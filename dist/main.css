@@ -191,6 +191,91 @@ ul {
 	fill: #FFAABA;
 }
 
+.floorplan-nav {
+	position: relative;
+}
+.floorplan-nav ul {
+	margin: 2.5vw 0 0 0;
+	padding: 0 0.625vw 0 0.625vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	max-height: 0;
+	height: 0;
+	width: 100%;
+}
+.floorplan-nav ul li:last-child {
+	padding: 0 0 1.25vw 0;
+}
+.floorplan-nav [data-floor]:hover {
+	color: #FFAABA;
+	cursor: pointer;
+	display: inline-block;
+	transition: color 250ms ease;
+}
+.floorplan-nav__current {
+	position: relative;
+	z-index: 2;
+	align-items: center;
+	cursor: pointer;
+	margin: 0 0 1.64vw 0;
+	transition: color 250ms ease;
+}
+.floorplan-nav__current:hover {
+	color: #FFAABA;
+}
+.floorplan-nav__current:hover svg path {
+	fill: #FFAABA;
+	transition: fill 250ms ease;
+}
+.floorplan-nav__current svg {
+	transform: rotate(0deg);
+	transition: transform 250ms ease;
+	margin: 0.39vw 0 0 0.234vw;
+	height: 0.62vw;
+	width: 1.24vw;
+}
+
+.has-floorplan-nav .floorplan-nav ul {
+	transition: max-height 250ms ease;
+	height: auto;
+	overflow: visible;
+	max-height: 1000px;
+}
+.has-floorplan-nav .floorplan-nav__current {
+	color: #FFAABA;
+}
+.has-floorplan-nav .floorplan-nav__current svg {
+	transform: rotate(-180deg);
+}
+.has-floorplan-nav .floorplan-nav__current svg path {
+	fill: #FFAABA;
+}
+
+.floorplan__size {
+	margin: 0 0 1.5625vw 0;
+}
+
+.floorplans {
+	margin: 0 0 27.73vw 0;
+}
+.floorplans [data-floor-plan],
+.floorplans [data-floor-info] {
+	display: none;
+}
+.floorplans .active {
+	display: block;
+}
+.floorplans__details {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.floorplans__plan {
+	grid-column-start: 2;
+	grid-column-end: 5;
+}
+
 .full-width-image {
 	margin: 0 0 61.538vw 0;
 }

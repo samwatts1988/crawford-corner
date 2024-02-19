@@ -1,0 +1,28 @@
+.floorplan {
+	&__size {
+		margin: 0 0 1.5625vw 0;
+	}
+}
+
+.floorplans {
+	margin: 0 0 27.73vw 0;
+
+	[data-floor-plan],
+	[data-floor-info] {
+		display: none;
+	}
+
+	.active {
+		display: block;
+	}
+
+	&__details {
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	&__plan {
+		grid-column-start: 2;
+		grid-column-end: 5;
+	}
+}

@@ -23,8 +23,6 @@
 	function setFooterLottie() {
 		if( footerLottie.getBoundingClientRect().top < window.innerHeight ) {
 			footerLottieEl.play();
-		} else {
-			console.log("B");
 		}
 	}
 

@@ -5,6 +5,7 @@
 	cc\view( 'text-fixed-images' );
 	cc\view( 'text' );
 	cc\view( 'schedule' );
+	cc\view( 'floorplans' );
 	cc\view( 'offset-image-pair' );
 	cc\view( 'standfirst-gallery' );
 	cc\view( 'snippets-standfirst' );

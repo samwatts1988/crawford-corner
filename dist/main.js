@@ -270,6 +270,38 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 
 (function ($) {
 
+	if( !$( '.floorplan-nav' ) ) { return; }
+
+	var $toggle = $( '.floorplan-nav__current' );
+	var $nav = $( '.floorplan-nav ul' );
+	var $floorplans = $( '[data-floor]' );
+	var $body = $( 'body' );
+
+	$toggle.on( 'click', function (e) {
+		$body.toggleClass( 'has-floorplan-nav' );
+	});
+
+	$floorplans.each(function() {
+		$( this ).on( 'click', function(e) {
+			var $floor = $( this ).attr( 'data-floor' );
+			var $activeInfo = $( '[data-floor-info].active' );
+			var $activePlan = $( '[data-floor-plan].active' );
+			var $info = $('[data-floor-info="'+$floor+'"]');
+			var $plan = $('[data-floor-plan="'+$floor+'"]');
+
+			$activeInfo.removeClass( 'active' );
+			$activePlan.removeClass( 'active' );
+			$toggle.find( 'span' ).text( $floor );
+
+			$info.addClass( 'active' );
+			$plan.addClass( 'active' );
+			$body.removeClass( 'has-floorplan-nav' );
+		});
+	});
+
+})( jQuery );
+(function ($) {
+
 	if( !$( '.swiper-hero' ) ) { return; }
 
 	var hero = new Swiper('.swiper-hero', {
@@ -314,8 +346,6 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 	function setFooterLottie() {
 		if( footerLottie.getBoundingClientRect().top < window.innerHeight ) {
 			footerLottieEl.play();
-		} else {
-			console.log("B");
 		}
 	}
 
