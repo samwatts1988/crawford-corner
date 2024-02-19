@@ -11,6 +11,7 @@ body {
 }
 
 a {
+	transition: color 250ms ease;
 	text-decoration: none;
 	color: color(body);
 

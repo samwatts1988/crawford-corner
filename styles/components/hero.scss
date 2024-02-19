@@ -5,10 +5,10 @@
 		> div {
 			grid-column-start: 1;
 			grid-column-end: 3;
-			padding: 61.53vw var( --wrap-mobile ) 61.53vw var( --wrap-mobile );
+			padding: 60.256vw var( --wrap-mobile ) 60.76vw var( --wrap-mobile );
 
 			@include break {
-				padding: 13.59375vw 0 27.96875vw 0;
+				padding: 13.59375vw 0 28.28125vw 0;
 			}
 		}
 

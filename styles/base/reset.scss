@@ -23,7 +23,7 @@ button,
 a {
 	-webkit-tap-highlight-color: transparent;
 	touch-action: manipulation;
-	transition: 200ms;
+	// transition: color 200ms ease;
 	cursor: pointer;
 }
 
@@ -48,6 +48,15 @@ header,
 main,
 nav {
 	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
 }
 
 h1,

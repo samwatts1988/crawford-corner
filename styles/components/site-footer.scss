@@ -7,6 +7,12 @@
 		}
 	}
 
+	.download {
+		@media screen and ( max-width: $breakpoint ) {
+			margin: 0 0 10.51vw 0;
+		}
+	}
+
 	.content-wrap {
 		@media screen and ( max-width: $breakpoint ) {
 			padding: 10.256vw 0 0 0;
@@ -17,7 +23,7 @@
 		margin: 0 0 172vw 0;
 
 		@include break {
-			margin: 1.5625vw 0 14.0625vw 0;
+			margin: 1.5625vw 0 14.296875vw 0;
 		}
 
 		article {

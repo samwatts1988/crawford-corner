@@ -1,5 +1,5 @@
 .standfirst-gallery {
-	padding: 0 var( --wrap-mobile );
+	padding: 0 var( --wrap-mobile ) 61.53vw var( --wrap-mobile );
 	
 	@include break {
 		padding: 0;
@@ -13,7 +13,11 @@
 	}
 
 	.standfirst {
-		margin: 0 0 30.769vw 0;
+		margin: 0 0 26.92vw 0;
+
+		@include break {
+			margin: 0;
+		}
 	}
 
 	.gallery {
@@ -28,7 +32,7 @@
 
 		.swiper-navigation {
 			@include break {
-				padding: 0 0 2.5vw 0;
+				padding: 0 0 0.859vw 0;
 			}
 		}
 

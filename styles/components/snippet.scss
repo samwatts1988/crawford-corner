@@ -2,17 +2,21 @@
 	margin: 0 0 61.538vw 0;
 
 	@include break {
-		margin: 0 0 28.125vw 0;
+		margin: 0 0 27.5vw 0;
 	}
 
 	@media screen and ( max-width: $breakpoint ) {
-		row-gap: 10.256vw;
+		row-gap: 30.76vw;
 	}
 }
 
 .snippet {
 	flex-direction: column;
-	gap: 7.03125vw;
+	gap: 11.2vw;
+
+	@include break {
+		gap: 7.265625vw;
+	}
 
 	figure {
 		aspect-ratio: 350 / 224;
@@ -25,6 +29,10 @@
 
 	h2 {
 		font-size: inherit;
+	}
+
+	div div {
+		line-height: 1.25;
 	}
 
 	img {
