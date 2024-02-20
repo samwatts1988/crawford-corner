@@ -384,15 +384,23 @@ ul {
 }
 
 .splash {
+	align-items: flex-end;
 	position: fixed;
 	top: 0;
 	left: 0;
+	padding: 0 0 var(--wrap-mobile) 0;
 	width: 100%;
 	height: 100vh;
 	z-index: 10;
 	opacity: 1;
 	visibility: visible;
 	transition: opacity 750ms ease, visibility 750ms ease;
+}
+.splash .mobile {
+	max-height: 91.6vw;
+}
+.splash .desktop {
+	max-height: 49.02vw;
 }
 .splash-visible {
 	overflow: hidden;
@@ -1012,6 +1020,9 @@ ul {
 		grid-column-start: 3;
 		grid-column-end: 5;
 		margin: 0 0 14.765625vw 0;
+	}
+	.splash {
+		padding: 0 0 var(--wrap-desktop) 0;
 	}
 	.standfirst-gallery {
 		padding: 0;

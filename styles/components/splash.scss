@@ -1,13 +1,27 @@
 .splash {
+	align-items: flex-end;
 	position: fixed;
 	top: 0;
 	left: 0;
+	padding: 0 0 var( --wrap-mobile ) 0;
 	width: 100%;
 	height: 100vh;
 	z-index: z( splash );
 	opacity: 1;
 	visibility: visible;
 	transition: opacity 750ms ease, visibility 750ms ease;
+
+	@include break {
+		padding: 0 0 var( --wrap-desktop ) 0;
+	}
+
+	.mobile {
+		max-height: 91.6vw;
+	}
+
+	.desktop {
+		max-height: 49.02vw;
+	}
 
 	&-visible {
 		overflow: hidden;

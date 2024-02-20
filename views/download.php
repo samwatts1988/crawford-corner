@@ -1,5 +1,5 @@
 <?php 
-$link = get_field('brochure_pdf', 8);
+$link = get_field( 'brochure_pdf', 8 );
 if( $link ): 
     $link_url = $link['url'];
     $link_title = $link['title'];

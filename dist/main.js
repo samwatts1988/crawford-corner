@@ -321,51 +321,51 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 	});
 
 })( jQuery );
-(function () {
+// (() => {
 
-	var lottiePlayers = document.querySelectorAll( 'lottie-player' );
-	var splash = document.querySelector( '.splash' );
+// 	let lottiePlayers = document.querySelectorAll( 'lottie-player' );
+// 	let splash = document.querySelector( '.splash' );
 
-	lottiePlayers.forEach(function (player) {
+// 	lottiePlayers.forEach((player) => {
 
-		player.addEventListener( 'complete', function () {
-			document.body.classList.remove( 'splash-visible' );
-			document.body.classList.add( 'splash-hidden' );
+// 		player.addEventListener( 'complete', () => {
+// 			document.body.classList.remove( 'splash-visible' );
+// 			document.body.classList.add( 'splash-hidden' );
 
-			setTimeout(function () {
-				document.body.classList.remove( 'splash-hidden' );
-				splash.remove();
-			}, 1000);
-		});
+// 			setTimeout(() => {
+// 				document.body.classList.remove( 'splash-hidden' );
+// 				splash.remove();
+// 			}, 1000);
+// 		});
 		
-	});
+// 	});
 
-	var footerLottie = document.querySelector( '.footer-lottie' );
-	var footerLottieEl = footerLottie.querySelector( 'lottie-player' );
+// 	let footerLottie = document.querySelector( '.footer-lottie' );
+// 	let footerLottieEl = footerLottie.querySelector( 'lottie-player' );
 	
-	function setFooterLottie() {
-		if( footerLottie.getBoundingClientRect().top < window.innerHeight ) {
-			footerLottieEl.play();
-		}
-	}
+// 	function setFooterLottie() {
+// 		if( footerLottie.getBoundingClientRect().top < window.innerHeight ) {
+// 			footerLottieEl.play();
+// 		}
+// 	}
 
-	footerLottieEl.addEventListener( 'complete', function () {
-		footerLottieEl.pause();
-	});
+// 	footerLottieEl.addEventListener( 'complete', () => {
+// 		footerLottieEl.pause();
+// 	});
 
-	window.addEventListener( 'scroll', function () {
-		setFooterLottie();
-	});
+// 	window.addEventListener( 'scroll', () => {
+// 		setFooterLottie();
+// 	});
 
-	window.addEventListener( 'orientationchange', function () {
-		setFooterLottie();
-	});
+// 	window.addEventListener( 'orientationchange', () => {
+// 		setFooterLottie();
+// 	});
 
-	window.addEventListener( 'resize', function () {
-		setFooterLottie();
-	});
+// 	window.addEventListener( 'resize', () => {
+// 		setFooterLottie();
+// 	});
 
-})();
+// })();
 (function ($) {
 
 	if ('object-fit' in document.body.style) { return; }
