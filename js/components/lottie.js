@@ -6,13 +6,13 @@
 	lottiePlayers.forEach((player) => {
 
 		player.addEventListener( 'complete', () => {
-			document.body.classList.remove( 'splash-visible' );
-			document.body.classList.add( 'splash-hidden' );
+			// document.body.classList.remove( 'splash-visible' );
+			// document.body.classList.add( 'splash-hidden' );
 
-			setTimeout(() => {
-				document.body.classList.remove( 'splash-hidden' );
-				splash.remove();
-			}, 1000);
+			// setTimeout(() => {
+			// 	document.body.classList.remove( 'splash-hidden' );
+			// 	splash.remove();
+			// }, 1000);
 		});
 		
 	});
@@ -21,7 +21,7 @@
 	let footerLottieEl = footerLottie.querySelector( 'lottie-player' );
 	
 	function setFooterLottie() {
-		if( footerLottie.getBoundingClientRect().top < window.innerHeight ) {
+		if( footerLottie.getBoundingClientRect().bottom < window.innerHeight ) {
 			footerLottieEl.play();
 		}
 	}

@@ -29,6 +29,11 @@ ul {
 	list-style: none;
 }
 
+th {
+	font-weight: normal;
+	font-style: normal;
+}
+
 .text {
 	&\:md {
 		font-size: clamp( 1rem, 4.10256vw, 2.46rem );

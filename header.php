@@ -11,10 +11,10 @@
 
 	<header class="site-header">
 		<div class="wrap grid">
-			<div class="site-header__title">
+			<div data-reveal class="site-header__title">
 				<p class="font:bd text:md"><a href="<?php echo get_bloginfo( 'url' ); ?>"><?php echo get_bloginfo( 'name' ); ?></a></p>
 			</div>
-			<div class="site-header__desc">
+			<div data-reveal class="site-header__desc">
 				<p class="font:bd text:md"><?php echo get_bloginfo( 'description' ); ?></p>
 			</div>
 		</div>

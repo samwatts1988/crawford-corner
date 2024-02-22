@@ -5,7 +5,6 @@
 	const thumbnails = new Swiper('.swiper-standfirst-gallery', {
 	  speed: 750,
 	  slidesPerView: 1,
-	  spaceBetween: 24,
 	  loop: true,
 	  keyboard: {
 	  	enabled: true
