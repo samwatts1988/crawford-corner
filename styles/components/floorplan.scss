@@ -8,6 +8,12 @@
 	}
 }
 
+[data-floor="Total"],
+[data-floor-info="Total"],
+[data-floor-plan="Total"] {
+	display: none;
+}
+
 .floorplans {
 	margin: 0 0 61.53vw 0;
 

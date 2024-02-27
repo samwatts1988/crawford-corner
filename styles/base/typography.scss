@@ -6,7 +6,7 @@ body {
 	font-size: clamp( 1rem, 4.102vw, 2.46rem );
 
 	@include break {
-		font-size: clamp( 1rem, 1.25vw, 2rem );
+		font-size: clamp( 0.7439025rem, 1.25vw, 2rem );
 	}
 }
 
@@ -39,14 +39,14 @@ th {
 		font-size: clamp( 1rem, 4.10256vw, 2.46rem );
 
 		@include break {
-			font-size: clamp( 1.25rem, 1.5625vw, 2.5rem );
+			font-size: clamp( 0.930125rem, 1.5625vw, 2.5rem );
 		}
 	}
 	&\:sf {
 		font-size: clamp( 1.625rem, 6.66vw, 4rem );
 
 		@include break {
-			font-size: clamp( 2.5rem, 3.125vw, 5rem );
+			font-size: clamp( 1.854625rem, 3.125vw, 5rem );
 		}
 	}
 }

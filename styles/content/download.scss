@@ -9,9 +9,13 @@
 
 		@include break {
 			display: block;
-			margin: 0.3375vw 1.875vw 0 0;
+			margin: 0.6375vw 1.875vw 0 0;
 			height: 1.24609375vw;
 			width: 1.69375vw;
+		}
+
+		@include bp( 860px ) {
+			margin: 0.3375vw 1.875vw 0 0;
 		}
 
 		g {

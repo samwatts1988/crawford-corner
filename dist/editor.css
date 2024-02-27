@@ -3,6 +3,16 @@
 	--wrap-desktop: 1.5rem;
 }
 
+@keyframes wipe-out-right {
+	from {
+		-webkit-clip-path: inset(0 0 0 0);
+		        clip-path: inset(0 0 0 0);
+	}
+	to {
+		-webkit-clip-path: inset(0 0 0 100%);
+		        clip-path: inset(0 0 0 100%);
+	}
+}
 @font-face {
 	font-family: "BrutBold";
 	font-weight: 400;
@@ -34,6 +44,10 @@ body {
 	margin: 0;
 	color: #735D53;
 	background: #fff;
+}
+
+main {
+	overflow: hidden;
 }
 
 input[type=submit],
@@ -474,22 +488,22 @@ body {
 body > :first-child {
 	margin-top: 0;
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 640px) {
 	body {
-		font-size: clamp(1rem, 1.25vw, 2rem);
+		font-size: clamp(0.7439025rem, 1.25vw, 2rem);
 	}
 	.text\:md {
-		font-size: clamp(1.25rem, 1.5625vw, 2.5rem);
+		font-size: clamp(0.930125rem, 1.5625vw, 2.5rem);
 	}
 	.text\:sf {
-		font-size: clamp(2.5rem, 3.125vw, 5rem);
+		font-size: clamp(1.854625rem, 3.125vw, 5rem);
 	}
 	.desktop {
 		display: block;
 	}
 	.download svg {
 		display: block;
-		margin: 0.3375vw 1.875vw 0 0;
+		margin: 0.6375vw 1.875vw 0 0;
 		height: 1.24609375vw;
 		width: 1.69375vw;
 	}
@@ -504,7 +518,12 @@ body > :first-child {
 		height: 0.833vw;
 	}
 }
-@media screen and (max-width: 860px) {
+@media screen and (min-width: 860px) {
+	.download svg {
+		margin: 0.3375vw 1.875vw 0 0;
+	}
+}
+@media screen and (max-width: 640px) {
 	.download {
 		font-size: clamp(1.25rem, 5.12vw, 49.22px);
 	}

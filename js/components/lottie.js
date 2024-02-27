@@ -6,13 +6,13 @@
 	lottiePlayers.forEach((player) => {
 
 		player.addEventListener( 'complete', () => {
-			// document.body.classList.remove( 'splash-visible' );
-			// document.body.classList.add( 'splash-hidden' );
+			document.body.classList.remove( 'splash-visible' );
+			document.body.classList.add( 'splash-hidden' );
 
-			// setTimeout(() => {
-			// 	document.body.classList.remove( 'splash-hidden' );
-			// 	splash.remove();
-			// }, 1000);
+			setTimeout(() => {
+				document.body.classList.remove( 'splash-hidden' );
+				splash.remove();
+			}, 2000);
 		});
 		
 	});

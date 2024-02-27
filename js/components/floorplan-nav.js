@@ -29,4 +29,11 @@
 		});
 	});
 
+	$( document ).on( 'click', function(e) {
+		e.preventDefault();
+		if ($(e.target).closest(".floorplan-nav").length === 0) {
+        	$body.removeClass( 'has-floorplan-nav' );
+    	} 
+	});
+
 })( jQuery );

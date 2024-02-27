@@ -3,6 +3,16 @@
 	--wrap-desktop: 1.5rem;
 }
 
+@keyframes wipe-out-right {
+	from {
+		-webkit-clip-path: inset(0 0 0 0);
+		        clip-path: inset(0 0 0 0);
+	}
+	to {
+		-webkit-clip-path: inset(0 0 0 100%);
+		        clip-path: inset(0 0 0 100%);
+	}
+}
 @font-face {
 	font-family: "BrutBold";
 	font-weight: 400;
@@ -34,6 +44,10 @@ body {
 	margin: 0;
 	color: #735D53;
 	background: #fff;
+}
+
+main {
+	overflow: hidden;
 }
 
 input[type=submit],
@@ -262,6 +276,12 @@ th {
 	margin: 0 0 3.84vw 0;
 }
 
+[data-floor=Total],
+[data-floor-info=Total],
+[data-floor-plan=Total] {
+	display: none;
+}
+
 .floorplans {
 	margin: 0 0 61.53vw 0;
 }
@@ -342,7 +362,7 @@ th {
 }
 
 .site-header {
-	padding: 3.125rem 0;
+	padding: var(--wrap-mobile) 0;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -398,8 +418,9 @@ th {
 	height: 100dvh;
 	z-index: 10;
 	opacity: 1;
+	transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
 	visibility: visible;
-	transition: opacity 750ms ease, visibility 750ms ease;
+	transition: opacity 750ms ease, visibility 750ms ease, transform 750ms ease;
 }
 .splash .mobile {
 	max-height: 91.6vw;
@@ -415,8 +436,7 @@ th {
 	color: #FCF6F4;
 }
 .splash-hidden .splash {
-	opacity: 0;
-	visibility: hidden;
+	animation: 1750ms ease wipe-out-right both;
 }
 
 .standfirst-gallery {
@@ -930,15 +950,15 @@ th {
 .has-tab-focus :focus {
 	outline: 2px auto #0073AA;
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 640px) {
 	body {
-		font-size: clamp(1rem, 1.25vw, 2rem);
+		font-size: clamp(0.7439025rem, 1.25vw, 2rem);
 	}
 	.text\:md {
-		font-size: clamp(1.25rem, 1.5625vw, 2.5rem);
+		font-size: clamp(0.930125rem, 1.5625vw, 2.5rem);
 	}
 	.text\:sf {
-		font-size: clamp(2.5rem, 3.125vw, 5rem);
+		font-size: clamp(1.854625rem, 3.125vw, 5rem);
 	}
 	.credit a {
 		margin: 1.875vw 0 0 0;
@@ -1099,7 +1119,7 @@ th {
 	}
 	.download svg {
 		display: block;
-		margin: 0.3375vw 1.875vw 0 0;
+		margin: 0.6375vw 1.875vw 0 0;
 		height: 1.24609375vw;
 		width: 1.69375vw;
 	}
@@ -1128,7 +1148,12 @@ th {
 		padding: 0 var(--wrap-desktop);
 	}
 }
-@media screen and (max-width: 860px) {
+@media screen and (min-width: 860px) {
+	.download svg {
+		margin: 0.3375vw 1.875vw 0 0;
+	}
+}
+@media screen and (max-width: 640px) {
 	.floorplans .grid {
 		padding: 0 var(--wrap-mobile);
 		row-gap: 15.89vw;

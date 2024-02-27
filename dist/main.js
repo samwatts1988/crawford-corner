@@ -299,6 +299,13 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 		});
 	});
 
+	$( document ).on( 'click', function(e) {
+		e.preventDefault();
+		if ($(e.target).closest(".floorplan-nav").length === 0) {
+        	$body.removeClass( 'has-floorplan-nav' );
+    	} 
+	});
+
 })( jQuery );
 (function ($) {
 
@@ -329,13 +336,13 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 	lottiePlayers.forEach(function (player) {
 
 		player.addEventListener( 'complete', function () {
-			// document.body.classList.remove( 'splash-visible' );
-			// document.body.classList.add( 'splash-hidden' );
+			document.body.classList.remove( 'splash-visible' );
+			document.body.classList.add( 'splash-hidden' );
 
-			// setTimeout(() => {
-			// 	document.body.classList.remove( 'splash-hidden' );
-			// 	splash.remove();
-			// }, 1000);
+			setTimeout(function () {
+				document.body.classList.remove( 'splash-hidden' );
+				splash.remove();
+			}, 2000);
 		});
 		
 	});
