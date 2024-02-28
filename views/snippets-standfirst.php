@@ -5,6 +5,11 @@ $standfirst = get_field( 'snippets_standfirst' );
 ?>
 
 <section class="snippets-standfirst">
+	<?php if( $standfirst ) : ?>
+		<div data-reveal class="grid">
+			<div class="standfirst font:bd text:sf"><?php echo $standfirst; ?></div>
+		</div>
+	<?php endif; ?>
 	<div data-step-reveal class="snippets grid">
 		<?php while( have_rows( 'snippet' ) ) : the_row(); 
 			cc\view( 'snippet', [ 
@@ -14,10 +19,4 @@ $standfirst = get_field( 'snippets_standfirst' );
 			]);
 		endwhile; ?>
 	</div>
-
-	<?php if( $standfirst ) : ?>
-		<div data-reveal class="grid">
-			<div class="standfirst font:bd text:sf"><?php echo $standfirst; ?></div>
-		</div>
-	<?php endif; ?>
 </section>

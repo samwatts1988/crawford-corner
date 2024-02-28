@@ -216,6 +216,10 @@ th {
 	margin: 10.255vw 0 0 0;
 }
 
+.standfirst > *:not(:last-child):not(li) {
+	margin: 0 0 3.90625vw 0;
+}
+
 /**
  * Swiper 6.8.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions

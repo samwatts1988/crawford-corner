@@ -3,7 +3,7 @@
 	
 	@include break {
 		padding: 0;
-		margin: 0 0 28.125vw 0;
+		margin: 0 0 25.43vw 0;
 	}
 
 	.gallery,
@@ -25,7 +25,6 @@
 
 
 		@include break {
-			transform: translateY( -2.34375vw );
 			grid-column-start: 3;
 			grid-column-end: 5;			
 		}

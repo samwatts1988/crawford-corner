@@ -12,6 +12,7 @@
 			setTimeout(() => {
 				document.body.classList.remove( 'splash-hidden' );
 				splash.remove();
+				hero.autoplay.start();
 			}, 2000);
 		});
 		

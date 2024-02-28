@@ -17,6 +17,46 @@
 		}
 	}
 
+	&__icons {
+		flex-wrap: wrap;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		row-gap: 5vw;
+		margin: 10vw 0 0 0;
+
+		@include break {
+			margin: 0;
+			grid-column-start: 3;
+			grid-column-end: 5;
+			column-gap: 3.125vw;
+			row-gap: 4.48vw;
+		}
+
+		li {
+			column-gap: 3.2vw;
+			align-items: center;
+			width: 100%;
+			@include break {
+				column-gap: 1.25vw;
+				width: 45%;
+			}
+		}
+
+		figure {
+			width: 19%;
+			@include break {
+				width: 17.6%;
+			}
+		}
+
+		p {
+			width: 75%;
+			@include break {
+				width: 76%;
+			}
+		}
+	}
+
 	header,
 	article {
 		> div:not(.text-fixed-images__small) {

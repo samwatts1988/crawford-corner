@@ -286,6 +286,8 @@ th {
 	margin: 0 0 61.53vw 0;
 }
 .floorplans img {
+	will-change: opacity;
+	mix-blend-mode: multiply;
 	width: 100%;
 }
 .floorplans [data-floor-plan],
@@ -356,6 +358,10 @@ th {
 }
 .site-footer > * {
 	padding: 0 var(--wrap-mobile);
+}
+.site-footer figure {
+	margin: 0 0 7.5vw 0;
+	width: 25vw;
 }
 .site-footer > .grid {
 	margin: 0 0 86vw 0;
@@ -463,6 +469,24 @@ th {
 .text-fixed-images {
 	padding: 0 var(--wrap-mobile);
 }
+.text-fixed-images__icons {
+	flex-wrap: wrap;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	row-gap: 5vw;
+	margin: 10vw 0 0 0;
+}
+.text-fixed-images__icons li {
+	column-gap: 3.2vw;
+	align-items: center;
+	width: 100%;
+}
+.text-fixed-images__icons figure {
+	width: 19%;
+}
+.text-fixed-images__icons p {
+	width: 75%;
+}
 .text-fixed-images header > div:not(.text-fixed-images__small),
 .text-fixed-images article > div:not(.text-fixed-images__small) {
 	grid-column-start: 1;
@@ -568,6 +592,10 @@ th {
 }
 .error .download {
 	margin: 10.255vw 0 0 0;
+}
+
+.standfirst > *:not(:last-child):not(li) {
+	margin: 0 0 3.90625vw 0;
 }
 
 /**
@@ -1019,6 +1047,13 @@ th {
 	.site-footer > * {
 		padding: 0 var(--wrap-desktop);
 	}
+	.site-footer figure {
+		margin: 0;
+		width: 9.375vw;
+	}
+	.site-footer article:first-child figure {
+		margin: 0 0 4.35vw 0;
+	}
 	.site-footer > .grid {
 		margin: 1.5625vw 0 14.296875vw 0;
 	}
@@ -1051,13 +1086,12 @@ th {
 	}
 	.standfirst-gallery {
 		padding: 0;
-		margin: 0 0 28.125vw 0;
+		margin: 0 0 25.43vw 0;
 	}
 	.standfirst-gallery .standfirst {
 		margin: 0;
 	}
 	.standfirst-gallery .gallery {
-		transform: translateY(-2.34375vw);
 		grid-column-start: 3;
 		grid-column-end: 5;
 	}
@@ -1067,6 +1101,23 @@ th {
 	.text-fixed-images {
 		margin: 0 0 14.0625vw 0;
 		padding: 0;
+	}
+	.text-fixed-images__icons {
+		margin: 0;
+		grid-column-start: 3;
+		grid-column-end: 5;
+		column-gap: 3.125vw;
+		row-gap: 4.48vw;
+	}
+	.text-fixed-images__icons li {
+		column-gap: 1.25vw;
+		width: 45%;
+	}
+	.text-fixed-images__icons figure {
+		width: 17.6%;
+	}
+	.text-fixed-images__icons p {
+		width: 76%;
 	}
 	.text-fixed-images article {
 		margin: 0 0 7.34375vw 0;

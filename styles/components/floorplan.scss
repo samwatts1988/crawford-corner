@@ -18,6 +18,8 @@
 	margin: 0 0 61.53vw 0;
 
 	img {
+		will-change: opacity;
+		mix-blend-mode: multiply;
 		width: 100%;
 	}
 

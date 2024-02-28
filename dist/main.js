@@ -1,3 +1,5 @@
+var hero;
+
 /**
  * Throttle execution of a function. Especially useful for rate limiting
  * execution of handlers on events like resize and scroll.
@@ -311,7 +313,7 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 
 	if( !$( '.swiper-hero' ) ) { return; }
 
-	var hero = new Swiper('.swiper-hero', {
+	hero = new Swiper('.swiper-hero', {
 	  speed: 750,
 	  slidesPerView: 1,
 	  loop: true,
@@ -319,9 +321,10 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 	  	enabled: true
 	  },
 	  autoplay: {
+	  	enabled: false,
 	  	delay: 4000
 	  },
-	  preloadImages: false,
+	  preloadImages: true,
 	  loadPrevNext: true,
 	  loadPrevNextAmount: 3,
 	  lazy: true
@@ -342,6 +345,7 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 			setTimeout(function () {
 				document.body.classList.remove( 'splash-hidden' );
 				splash.remove();
+				hero.autoplay.start();
 			}, 2000);
 		});
 		

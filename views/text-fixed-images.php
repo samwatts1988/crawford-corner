@@ -47,17 +47,17 @@ $square_img = get_field( 'large_image' );
 			</figure>
 		</div>
 
-		<figure data-reveal class="ar ar:square text-fixed-images__square">
-			<?php if( $square_img[ 'url' ] ) : ?>
-				<img 
-					width="<?php echo $square_img[ 'width' ]; ?>"
-					height="<?php echo $square_img[ 'height' ]; ?>"
-					src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-					data-lazy="<?php echo $square_img[ 'url' ]; ?>" 
-					alt="<?php echo get_bloginfo( 'name' ); ?>" 
-					class="cover"
-				>
-			<?php endif; ?>
-		</figure>
+		<ul class="flex spacious text-fixed-images__icons">
+			<?php while( have_rows( 'icons_&_text' ) ) : the_row(); ?>
+				<li data-reveal class="flex">
+					<figure>
+						<?php if( get_sub_field( 'icon' ) ) : ?>
+							<img src="<?php echo get_sub_field( 'icon' )[ 'url' ]; ?>" alt="Service icon">
+						<?php endif; ?>
+					</figure>
+					<p><?php echo get_sub_field( 'text' ); ?></p>
+				</li>
+			<?php endwhile; ?>
+		</ul>
 	</div>
 </section>

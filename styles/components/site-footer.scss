@@ -13,6 +13,23 @@
 		}
 	}
 
+	figure {
+		margin: 0 0 7.5vw 0;
+		width: 25vw;
+		@include break {
+			margin: 0;
+			width: 9.375vw;
+		}
+	}
+	
+	article:first-child {
+		figure {
+			@include break {
+				margin: 0 0 4.35vw 0;
+			}
+		}
+	}
+
 	.download {
 		@media screen and ( max-width: $breakpoint ) {
 			margin: 0 0 10.51vw 0;

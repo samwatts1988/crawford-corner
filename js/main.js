@@ -1,3 +1,5 @@
+let hero;
+
 //=require vendor/*
 //=require lib/*
 //=require components/*

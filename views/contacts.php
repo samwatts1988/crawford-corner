@@ -1,6 +1,8 @@
 <article class="keyline content-wrap">
-	<?php if( $content['heading'] ) : ?>
-		<p class="uppercase font:bd"><?php echo $content['heading']; ?></p>
+	<?php if( $content['logo'] ) : ?>
+		<figure>
+			<img src="<?php echo $content[ 'logo' ][ 'url' ]; ?>">
+		</figure>
 	<?php endif; ?>
 
 	<ul class="contacts">
