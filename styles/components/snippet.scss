@@ -1,6 +1,10 @@
 .snippets {
 	margin: 0 0 61.538vw 0;
 
+	&.grid {
+		padding: 0;
+	}
+
 	@include break {
 		margin: 0 0 27.5vw 0;
 	}
@@ -14,12 +18,22 @@
 	flex-direction: column;
 	gap: 11.2vw;
 
+	@include bp( 640px ) {
+		grid-area: span 1 / span 2;
+	}
+
+	@include bp( 1024px ) {
+		grid-area: span 1 / span 1;
+	}
+
 	@include break {
 		gap: 7.265625vw;
 	}
 
 	figure {
 		aspect-ratio: 350 / 224;
+		position: relative;
+		width: 100%;
 	}
 
 	@media screen and ( max-width: $breakpoint ) {

@@ -17,12 +17,20 @@
 			padding: 0 0.625vw 0 0.625vw;
 		}
 
+		li:nth-child(2) {
+			padding: 4vw 0 0 0;
+
+			@include break {
+				padding: 2vw 0 0 0; 
+			}
+		}
+
 		li:last-child {
 			padding: 0 0 4vw 0;
 
 			@include break {
 				padding: 0 0 1.25vw 0;
-			}
+			}			
 		}
 	}
 

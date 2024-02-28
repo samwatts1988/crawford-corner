@@ -1,5 +1,5 @@
 .credit {
-	a {
+	div {
 		display: block;
 		margin: 6.1538vw 0 0 0;
 		width: 30.762vw;
@@ -7,16 +7,6 @@
 		@include break {
 			margin: 1.875vw 0 0 0;
 			width: 9.375vw;
-		}
-	}
-
-	path {
-		transition: fill 250ms ease;
-	}
-
-	a:hover {
-		path {
-			fill: color( rollover );
 		}
 	}
 }

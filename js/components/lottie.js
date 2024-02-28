@@ -1,5 +1,7 @@
 (() => {
 
+	if( !document.querySelector( '.splash' ) ) return;
+
 	let lottiePlayers = document.querySelectorAll( 'lottie-player' );
 	let splash = document.querySelector( '.splash' );
 

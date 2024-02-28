@@ -30,8 +30,10 @@
 	});
 
 	$( document ).on( 'click', function(e) {
+		console.log(e.target);
+		if ( ( $(e.target).closest(".floorplan-nav").length === 0) && e.target.tagName.toLowerCase() !== 'a' )  {
 		e.preventDefault();
-		if ($(e.target).closest(".floorplan-nav").length === 0) {
+
         	$body.removeClass( 'has-floorplan-nav' );
     	} 
 	});

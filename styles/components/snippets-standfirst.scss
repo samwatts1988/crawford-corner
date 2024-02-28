@@ -9,6 +9,7 @@
 	.standfirst {
 		grid-column-start: 1;
 		grid-column-end: 3;
+		margin: 0 0 26.92vw 0;
 
 		@include break {
 			grid-column-start: 3;
