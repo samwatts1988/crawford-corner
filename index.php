@@ -10,5 +10,6 @@
 	cc\view( 'standfirst-gallery' );
 	cc\view( 'snippets-standfirst' );
 	cc\view( 'full-width-image' );
+	cc\view( 'full-width-video' );
 
 get_footer();

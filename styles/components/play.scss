@@ -1,0 +1,24 @@
+.play {
+	background: url( 'images/icons/play.svg' ) no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+	height: 10vw;
+	width: 10vw;
+	z-index: 2;
+	pointer-events: none;
+
+	@include break {
+		height: 5vw;
+		width: 5vw;		
+	}
+}
+
+.video-is-playing {
+	.play {
+		background: url( 'images/icons/pause.svg' ) no-repeat;
+		background-size: contain;
+	}
+}

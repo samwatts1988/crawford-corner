@@ -1,1 +1,17 @@
-.acf-fields>.acf-hide-label>.acf-label,body.term-php #acf-form-data~h2{display:none}body.term-php .acf-field .acf-label label{font-weight:600}.gallery-settings>.setting:nth-child(3),.gallery-settings>.setting:nth-child(5){display:none}
+.acf-fields > .acf-hide-label > .acf-label {
+	display: none;
+}
+
+body.term-php #acf-form-data ~ h2 {
+	display: none;
+}
+
+body.term-php .acf-field .acf-label label {
+	font-weight: 600;
+}
+
+.gallery-settings > .setting:nth-child(3),
+.gallery-settings > .setting:nth-child(5) {
+	display: none;
+}
+/*# sourceMappingURL=admin.css.map */

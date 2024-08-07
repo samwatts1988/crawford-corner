@@ -1,4 +1,5 @@
 let hero;
+let heroVideo;
 
 //=require vendor/*
 //=require lib/*

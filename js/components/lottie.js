@@ -4,6 +4,7 @@
 
 	let lottiePlayers = document.querySelectorAll( 'lottie-player' );
 	let splash = document.querySelector( '.splash' );
+	heroVideo = document.querySelector( '.hero-video' );
 
 	lottiePlayers.forEach((player) => {
 
@@ -14,7 +15,13 @@
 			setTimeout(() => {
 				document.body.classList.remove( 'splash-hidden' );
 				splash.remove();
+
 				hero.autoplay.start();
+
+				if( heroVideo ) {
+					heroVideo.play();
+				}
+
 			}, 2000);
 		});
 		

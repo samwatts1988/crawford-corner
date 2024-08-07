@@ -1,11 +1,27 @@
 .full-width-image {
+	position: relative;
 	margin: 0 0 61.538vw 0;
 
 	@include break {
 		margin: 0 0 28.125vw 0;
 	}
 
+	video,
 	img {
 		width: 100%;
+	}
+}
+
+.full-width-video {
+	cursor: pointer;
+}
+
+.video-is-playing {
+	.full-width-video {
+		&:hover {
+			#seek-bar {
+				opacity: 1;
+			}
+		}
 	}
 }
