@@ -250,6 +250,40 @@
             "return_format": "array"
         },
         {
+            "key": "field_66b3602999879",
+            "label": "Full Width Video",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_66b360d29987a",
+            "label": "Full Width Video",
+            "name": "full_width_video",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_65cd1d5b5e39d",
             "label": "Text & Fixed Images",
             "name": "",
@@ -917,40 +951,6 @@
             "delay": 0
         },
         {
-            "key": "field_66b3602999879",
-            "label": "Full Width Video",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_66b360d29987a",
-            "label": "Full Width Video",
-            "name": "full_width_video",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_65cd1b8d403af",
             "label": "Full Width Image",
             "name": "",
@@ -1311,5 +1311,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723031779
+    "modified": 1723197512
 }

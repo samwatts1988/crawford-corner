@@ -41,14 +41,44 @@
 		});
 	});
 
+	video.addEventListener( "ended", function(e) {
+		document.body.classList.remove( 'video-is-playing' );
+		video.currentTime = 0;
+	});
+
 	seekBar.addEventListener("mousedown", function() {
 		video.pause();
-		document.body.classList.renove( 'video-is-playing' );
+	});
+
+	video.addEventListener("mousemove", function() {
+		document.body.classList.remove( 'video-idle' );
 	});
 
 	seekBar.addEventListener("mouseup", function() {
 		video.play();
 		document.body.classList.add( 'video-is-playing' );
 	});
+
+	let timer, currSeconds = 0; 
+          
+        function resetTimer() { 
+            clearInterval(timer); 
+            currSeconds = 0; 
+            timer = setInterval(startIdleTimer, 1000); 
+        } 
+          
+        window.onmousemove = resetTimer; 
+        window.onclick = resetTimer; 
+          
+        function startIdleTimer() { 
+
+        	if( !document.querySelector( '.video-is-playing' ) ) return;
+              
+            currSeconds++; 
+
+            if( currSeconds > 1 ) {
+            	document.body.classList.add( 'video-idle' );
+            } 
+        } 
 
 })( jQuery );

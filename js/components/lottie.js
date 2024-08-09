@@ -12,15 +12,15 @@
 			document.body.classList.remove( 'splash-visible' );
 			document.body.classList.add( 'splash-hidden' );
 
+			if( heroVideo ) {
+				heroVideo.play();
+			}
+
 			setTimeout(() => {
 				document.body.classList.remove( 'splash-hidden' );
 				splash.remove();
 
 				hero.autoplay.start();
-
-				if( heroVideo ) {
-					heroVideo.play();
-				}
 
 			}, 2000);
 		});

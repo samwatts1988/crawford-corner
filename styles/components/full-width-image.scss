@@ -14,14 +14,20 @@
 
 .full-width-video {
 	cursor: pointer;
+
+	&.full-width-image {
+		margin: 0 0 30vw 0;
+
+		@include break {
+			margin: 0 0 14.125vw 0;
+		}
+	}
 }
 
 .video-is-playing {
 	.full-width-video {
-		&:hover {
-			#seek-bar {
-				opacity: 1;
-			}
+		#seek-bar {
+			opacity: 1;
 		}
 	}
 }

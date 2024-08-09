@@ -7,7 +7,7 @@ if( $video ) :
 ?>
 	<figure data-reveal class="full-width-image full-width-video wrap">
 		<video playsinline>
-			<source src="<?php echo $video; ?>">
+			<source src="<?php echo $video; ?>#t=0.1">
 		</video>
 
 		<a class="play" href="#play">

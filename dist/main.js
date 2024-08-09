@@ -348,15 +348,15 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 			document.body.classList.remove( 'splash-visible' );
 			document.body.classList.add( 'splash-hidden' );
 
+			if( heroVideo ) {
+				heroVideo.play();
+			}
+
 			setTimeout(function () {
 				document.body.classList.remove( 'splash-hidden' );
 				splash.remove();
 
 				hero.autoplay.start();
-
-				if( heroVideo ) {
-					heroVideo.play();
-				}
 
 			}, 2000);
 		});
@@ -459,15 +459,45 @@ for(var e,a,i=arguments.length,s=new Array(i),r=0;r<i;r++){ s[r]=arguments$1[r];
 		});
 	});
 
+	video.addEventListener( "ended", function(e) {
+		document.body.classList.remove( 'video-is-playing' );
+		video.currentTime = 0;
+	});
+
 	seekBar.addEventListener("mousedown", function() {
 		video.pause();
-		document.body.classList.renove( 'video-is-playing' );
+	});
+
+	video.addEventListener("mousemove", function() {
+		document.body.classList.remove( 'video-idle' );
 	});
 
 	seekBar.addEventListener("mouseup", function() {
 		video.play();
 		document.body.classList.add( 'video-is-playing' );
 	});
+
+	var timer, currSeconds = 0; 
+          
+        function resetTimer() { 
+            clearInterval(timer); 
+            currSeconds = 0; 
+            timer = setInterval(startIdleTimer, 1000); 
+        } 
+          
+        window.onmousemove = resetTimer; 
+        window.onclick = resetTimer; 
+          
+        function startIdleTimer() { 
+
+        	if( !document.querySelector( '.video-is-playing' ) ) { return; }
+              
+            currSeconds++; 
+
+            if( currSeconds > 1 ) {
+            	document.body.classList.add( 'video-idle' );
+            } 
+        } 
 
 })( jQuery );
 (function ($) {

@@ -5,14 +5,16 @@
 	top: 50%;
 	left: 50%;
 	transform: translate( -50%, -50% );
-	height: 10vw;
-	width: 10vw;
+	height: 12.5vw;
+	width: 12.5vw;
 	z-index: 2;
+	opacity: 1;
 	pointer-events: none;
+	transition: opacity 250ms ease;
 
 	@include break {
-		height: 5vw;
-		width: 5vw;		
+		height: 6.25vw;
+		width: 6.25vw;		
 	}
 }
 
@@ -20,5 +22,13 @@
 	.play {
 		background: url( 'images/icons/pause.svg' ) no-repeat;
 		background-size: contain;
+		transform: rotate( 90deg ) translate( -50%, -50% );
+		transform-origin: top left;
+	}
+
+	&.video-idle {
+		.play {
+			opacity: 0;
+		}
 	}
 }
