@@ -6,8 +6,8 @@ if( $video ) :
 
 ?>
 	<figure data-reveal class="full-width-image full-width-video wrap">
-		<video playsinline>
-			<source src="<?php echo $video; ?>#t=0.1">
+		<video poster="<?php echo get_stylesheet_directory_uri(); ?>/images/poster.jpg" playsinline>
+			<source src="<?php echo $video; ?>">
 		</video>
 
 		<a class="play" href="#play">

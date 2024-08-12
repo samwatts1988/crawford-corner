@@ -326,6 +326,11 @@ th {
 .hero {
 	width: 100%;
 }
+.hero video {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
 .hero__standfirst > div {
 	grid-column-start: 1;
 	grid-column-end: 3;
@@ -401,6 +406,7 @@ th {
 	position: relative;
 	z-index: 1;
 	opacity: 0;
+	cursor: pointer;
 	transition: opacity 500ms ease;
 }
 #seek-bar::-webkit-slider-thumb {
